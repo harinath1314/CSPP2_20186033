@@ -22,6 +22,6 @@ public class Solution {
 		double root1 = (-b + det)/2*a;
 		double root2 = (-b - det)/2*a;
 		System.out.print(root1);
-		System.out.print(root2);
+		System.out.print( root2);
 	}
 }
