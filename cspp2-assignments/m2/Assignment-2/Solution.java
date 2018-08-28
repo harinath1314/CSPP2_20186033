@@ -1,5 +1,7 @@
 /**
  * main program of finding root sof equations.
+ * author hrinath
+ * date : 28/08/18
  */
 import java.util.Scanner;
 import java.lang.*;
@@ -20,9 +22,9 @@ public class Solution {
 		rootsOfQuadraticEquation(a, b, c);
 	}
 	/* 
-	*
+		*
 	*/
-	static void rootsOfQuadraticEquation(final int a,final  int b,final int c) {
+	static void rootsOfQuadraticEquation(final int a, final  int b, final int c) {
 		/**
 		 * roots
 		 */
