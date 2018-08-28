@@ -1,9 +1,11 @@
 /**
  * main program of finding root sof equations.
  */
-import java.util.*;
+import java.util.Scanner;
 import java.lang.*;
-
+/**
+ * Class for solution.
+ */
 public class Solution {
 	/*
 	Do not modify this main function.
@@ -20,11 +22,12 @@ public class Solution {
 	/* 
 	*
 	*/
-	static void rootsOfQuadraticEquation(int a, int b, int c) {
+	static void rootsOfQuadraticEquation(final int a,final  int b,final int c) {
 		/**
 		 * roots
 		 */
-		double det = Math.sqrt((b * b) - 4 * a * c);
+		int f = 4;
+		double det = Math.sqrt((b * b) - f * a * c);
 		double root1 = (-b + det) / 2 * a;
 		double root2 = (-b - det) / 2 * a;
 		System.out.print(root1 + " ");
