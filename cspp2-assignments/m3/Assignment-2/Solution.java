@@ -28,14 +28,14 @@ public class Solution {
         final int refer = 7;
         final int div = 10;
         int count = 0;
-        for (int i =7 ; i <= n; i ++ ) {
+        for (int i = refer ;i <= n;i ++) {
             {
                 int num = i;
                 while (num > 0) {
                     int digit = num % div;
                     num = num / div;
-                    if (digit == refer){
-                        count += 1;}
+                    if (digit == refer) {
+                        count += 1; }
                 }
             }
             
