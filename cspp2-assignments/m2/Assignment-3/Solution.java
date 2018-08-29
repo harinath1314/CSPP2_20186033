@@ -19,7 +19,7 @@ public final class Solution {
          * { item_description }
          */
     }
-    /**
+    /**.
      * main function
      *
      * @param      args  The arguments
