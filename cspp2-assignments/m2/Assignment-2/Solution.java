@@ -11,7 +11,12 @@ public class Solution {
     /**
     *Do not modify this main function.
     */
-    /**
+    private Solution() {
+    	/**
+    	 * 
+    	 */
+    }
+    /**.
      * { main function or method}
      *
      * @param      args  The arguments
@@ -34,7 +39,7 @@ public class Solution {
     /**.
         *this is a roots
     */
-    /**
+    /**.
      * { function_description }
      *
      * @param      a     { parameter_description }
