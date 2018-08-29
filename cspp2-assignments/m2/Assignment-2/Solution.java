@@ -7,14 +7,14 @@ import java.util.Scanner;
 /**
  * Class for solution.
  */
-public class Solution {
+public final class Solution {
     /**
     *Do not modify this main function.
     */
     private Solution() {
-    	/**
-    	 * 
-    	 */
+        /**
+         *
+         */
     }
     /**.
      * { main function or method}
