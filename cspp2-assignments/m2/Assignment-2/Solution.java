@@ -8,8 +8,8 @@ import java.util.Scanner;
  * Class for solution.
  */
 public class Solution {
-    /*
-    Do not modify this main function.
+    /**
+    *Do not modify this main function.
     */
     public static void main(String[] args) {
         /**
@@ -23,7 +23,7 @@ public class Solution {
 
         rootsOfQuadE(a, b, c);
     }
-    /*
+    /**
         *this is a roots
     */
     static void rootsOfQuadE(final int a, final  int b, final int c) {
