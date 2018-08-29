@@ -6,18 +6,24 @@ import java.util.Scanner;
     *Author : Harinatha reddy
     *date : 29/08/18
  */
-public class Solution {
+public final class Solution {
     /**.
-     * { function_description }
-     *
-     * @param      args  The arguments
+     * Constructs the object.
      */
     private Solution() {
         /**
          * { item_description }
          */
     }
+    /**.
+     * { function_description }
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
+        /**
+         * { var_description }
+         */
 
         Scanner s = new Scanner(System.in);
         int n1 = s.nextInt();
