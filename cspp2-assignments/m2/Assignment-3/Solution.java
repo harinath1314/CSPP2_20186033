@@ -11,11 +11,19 @@ public final class Solution {
     /*
     Do not modify this main function.
     */
+    /**
+     * private constructor.
+     */
     private Solution() {
         /**
          * { item_description }
          */
     }
+    /**
+     * main function
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         int base = s.nextInt();
