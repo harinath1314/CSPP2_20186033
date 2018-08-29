@@ -4,7 +4,6 @@
  * date : 28/08/18
  */
 import java.util.Scanner;
-import java.lang.*;
 /**
  * Class for solution.
  */
@@ -21,7 +20,7 @@ public class Solution {
 
         rootsOfQuadE(a, b, c);
     }
-    /* 
+    /*
         *
     */
     static void rootsOfQuadE(final int a, final  int b, final int c) {
