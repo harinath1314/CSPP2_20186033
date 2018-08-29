@@ -20,10 +20,12 @@ public class Solution {
         int b = scan.nextInt();
         int c = scan.nextInt();
 
-
+        /**
+         * 
+         */
         rootsOfQuadE(a, b, c);
     }
-    /**
+    /**.
         *this is a roots
     */
     static void rootsOfQuadE(final int a, final  int b, final int c) {
