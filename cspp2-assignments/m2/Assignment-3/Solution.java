@@ -11,11 +11,16 @@ public class Solution {
     /*
     Do not modify this main function.
     */
+    private Solution() {
+        /**
+         * { item_description }
+         */
+    }
     public static void main(String[] args) {
-        Scanner s=new Scanner(System.in);
+        Scanner s = new Scanner(System.in);
         int base = s.nextInt();
         int exponent = s.nextInt();
-        int result=power(base,exponent);
+        long result = power(base,exponent);
         System.out.println(result);
     }
     /**
@@ -26,11 +31,11 @@ public class Solution {
      *
      * @return     { description_of_the_return_value }
      */
-    static int power(int base, int exponent) {
-        if (exponent == 0){
+    static long power(int base, int exponent) {
+        if (exponent == 0) {
             return 1;
         }
-        return base*power(base, (exponent-1));
+        return base * power(base, (exponent - 1));
 
     }
 
