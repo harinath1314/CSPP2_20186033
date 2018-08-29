@@ -12,6 +12,9 @@ public class Solution {
     Do not modify this main function.
     */
     public static void main(String[] args) {
+        /**
+         * main method.
+         */
         Scanner scan = new Scanner(System.in);
         int a = scan.nextInt();
         int b = scan.nextInt();
@@ -21,7 +24,7 @@ public class Solution {
         rootsOfQuadE(a, b, c);
     }
     /*
-        *
+        *this is a roots
     */
     static void rootsOfQuadE(final int a, final  int b, final int c) {
         /**
