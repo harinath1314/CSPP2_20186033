@@ -7,7 +7,7 @@ import java.util.Scanner;
     * author : harinatha reddy
     * date : 29/08/18
  */
-public class Solution {
+public final class Solution {
     /*
     Do not modify this main function.
     */
@@ -16,11 +16,11 @@ public class Solution {
          * { item_description }
          */
     }
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         int base = s.nextInt();
         int exponent = s.nextInt();
-        long result = power(base,exponent);
+        long result = power(base, exponent);
         System.out.println(result);
     }
     /**
@@ -31,7 +31,7 @@ public class Solution {
      *
      * @return     { description_of_the_return_value }
      */
-    static long power(int base, int exponent) {
+    static long power(final int base, final int exponent) {
         if (exponent == 0) {
             return 1;
         }
