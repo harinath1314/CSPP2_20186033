@@ -29,7 +29,6 @@ public class Solution {
         final int div = 10;
         int count = 0;
         for (int i = refer; i <= n; i++) {
-            {
                 int num = i;
                 while (num > 0) {
                     int digit = num % div;
@@ -38,7 +37,6 @@ public class Solution {
                         count += 1;
                     }
                 }
-            }
         }
         System.out.println(count);
     }
