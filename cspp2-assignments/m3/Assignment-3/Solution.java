@@ -12,7 +12,7 @@ public class Solution {
      *
      * @param      args  The arguments
      */
-    public Solution(){
+    private Solution() {
         /**
          * { item_description }
          */
