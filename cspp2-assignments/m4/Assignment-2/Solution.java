@@ -17,26 +17,24 @@ public final class Solution {
 	 */
 	public static void main(final String[] args) {
 		Scanner input = new Scanner(System.in);
-		String inp = input.nextLine();
-		System.out.println(inp);
-		String[] input_array = inp.split(" ");
-		System.out.println(Arrays.toString(input_array));
- 		int m = Integer.parseInt(input_array[0]);
-		int n = Integer.parseInt(input_array[1]);
+		int m = Integer.parseInt(input.next());
+ 		int n = Integer.parseInt(input.next());
+
 		int[][] mat1 = new int[m][n];
 		for (int i = 0; i < m; i++) {
-			for (int j = 0; j < n ; j++ ) {
-				mat1[i][j] = input.nextInt();
+			for (int j =0; j < n; j++ ) {
+				mat1[i][j] = Integer.parseInt(input.next());
 			}
+
 		}
-		String input2 = input.nextLine();
-		String[] input_array2 = input2.split(" ");
-		int o = Integer.parseInt(input_array2[0]);
-		int p = Integer.parseInt(input_array2[1]);
+		int o = Integer.parseInt(input.next());
+		int p = Integer.parseInt(input.next());
+
 		int[][] mat2 = new int[o][p];
+
 		for (int i = 0; i < o; i++) {
 			for (int j = 0; j < p; j++ ) {
-				mat2[i][j] = input.nextInt();
+				mat2[i][j] = Integer.parseInt(input.next());
 			}
 		}
 		if (m == o && n == p) {
@@ -44,8 +42,10 @@ public final class Solution {
 				for (int j = 0; j < n; j++ ) {
 					mat1[i][j] = mat1[i][j] + mat2[i][j];
 				}
+				System.out.println(Arrays.toString(mat1[i]));
 			}
-		} else
+		} 
+		else
 			System.out.println("not possible");
 	}
 }
