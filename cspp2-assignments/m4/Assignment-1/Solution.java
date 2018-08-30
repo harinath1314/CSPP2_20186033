@@ -10,7 +10,7 @@ import java.util.Arrays;
  */
 
 public final class Solution {
-    /**
+    /**.
     Fill this main function to print maximum of given array
     */
     private Solution() {
