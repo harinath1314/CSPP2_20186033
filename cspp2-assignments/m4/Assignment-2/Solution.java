@@ -9,6 +9,14 @@ import java.util.Scanner;
     * date : 30/8/18
  */
 public final class Solution {
+    /**
+     * Constructs the object.
+     */
+    private Solution(){
+        /**
+         * { item_description }
+         */
+    }
     /**.
      * { function_description }
      *
@@ -37,7 +45,7 @@ public final class Solution {
             }
         }
         if (m == o && n == p) {
-            for (int i = 0; i < m ; i++) {
+            for (int i = 0; i < m; i++) {
                 String s = "";
                 for (int j = 0; j < n; j++) {
                     mat1[i][j] = mat1[i][j] + mat2[i][j];
