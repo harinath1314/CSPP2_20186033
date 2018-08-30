@@ -53,8 +53,7 @@ public final class Solution {
                 }
                 System.out.println(s.substring(0, s.length() - 1));
             }
-        }
-        else {
+        } else {
             System.out.println("not possible");
         }
     }
