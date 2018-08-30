@@ -39,10 +39,12 @@ public final class Solution {
 		}
 		if (m == o && n == p) {
 			for (int i = 0; i < m ; i++) {
+				String s = "";
 				for (int j = 0; j < n; j++ ) {
 					mat1[i][j] = mat1[i][j] + mat2[i][j];
+					s += mat1[i][j] + " ";
 				}
-				System.out.println(Arrays.toString(mat1[i]));
+				System.out.println(s.substring(0, s.length()-1));
 			}
 		} 
 		else
