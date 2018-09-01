@@ -21,7 +21,7 @@ public final class Solution {
     static void oddComposites(final int n) {
 	//my code is here
     	for (int i = 9;i < n; i++ ) {
-    		if ((i%2!=0) && (i%3 == 0 || i%5 == 0|| i%7==0 || i%9==0 || i%11 == 0)) {
+    		if ((i%2!=0) && (i%3 == 0 || i%5 == 0|| i%7==0 || i%9==0)) {
     			System.out.println(i);
     			
     		}
