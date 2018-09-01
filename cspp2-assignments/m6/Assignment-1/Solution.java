@@ -20,8 +20,12 @@ public final class Solution {
      */
     static void oddComposites(final int n) {
 	//my code is here
-    	for (int i = 9;(i%2==0) && (i%3 == 0 || i%5 == 0|| i%7==0); i++ ) {
-    		System.out.println(i);
+    	for (int i = 9;i < n; i++ ) {
+    		if ((i%2==0) && (i%3 == 0 || i%5 == 0|| i%7==0)) {
+    			System.out.println(i);
+    			
+    		}
+    		
     	}
 
     }
