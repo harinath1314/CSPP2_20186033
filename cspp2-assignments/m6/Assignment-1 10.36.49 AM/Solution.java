@@ -21,7 +21,7 @@ public final class Solution {
     static void oddComposites(final int n) {
 	//my code is here
         int temp = 0;
-    		for (int j = 1; j < n ; j++) {
+    		for (int j = 1; j <= n ; j++) {
     			if (n % j == 0){
     				temp += 1;
     			}
