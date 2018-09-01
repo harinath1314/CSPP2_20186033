@@ -19,11 +19,11 @@ public final class Solution {
      */
     static void oddComposites(final int n) {
     //my code is here
-        int start = 9;
+        final int start = 9;
         for (int i = start; i < n; i++) {
         int temp = 0;
             for (int j = 1; j <= i; j++) {
-                if (i % j == 0){
+                if (i % j == 0) {
                     temp += 1;
                 }
             }
