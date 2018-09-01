@@ -21,14 +21,14 @@ public final class Solution {
     static void oddComposites(final int n) {
 	//my code is here
     	for (int i = 9;i < n; i++ ) {
-    		if ((i%2==0) && (i%3 == 0 || i%5 == 0|| i%7==0)) {
+    		if ((i%2!=0) && (i%3 == 0 || i%5 == 0|| i%7==0)) {
     			System.out.println(i);
     			
     		}
     		
-    	}
-
+    	} 
     }
+
     /**
     * main method as driver program.
     * @param args is the parameter for this method
@@ -36,6 +36,7 @@ public final class Solution {
     public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
         int n = scan.nextInt();
+        // int n = 40;
         oddComposites(n);
     }
 }
