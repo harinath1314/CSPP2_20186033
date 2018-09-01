@@ -27,7 +27,7 @@ public final class Solution {
     				temp += 1;
     			}
     		if(temp > 1){
-    			System.out.println(i);
+    			System.out.println(j);
     		}
     		}
     			
