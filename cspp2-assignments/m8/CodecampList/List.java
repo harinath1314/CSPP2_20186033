@@ -152,10 +152,8 @@ public class List {
 	 * number of items in the list? Would size variable be useful?
 	 */
 	public int get(int index) {
-		if (index < size) {
-			return hari[index];
-		}
-		return (0);
+		return hari[index];
+		
 	}
 
 	/*
@@ -221,6 +219,7 @@ public class List {
 		// create an object of the list to invoke methods on it
 		List l = new List();
 
+
 		// code to read the test cases input file
 		Scanner stdin = new Scanner(new BufferedInputStream(System.in));
 		// check if there is one more line to process
@@ -253,8 +252,14 @@ public class List {
 				System.out.println(l.indexOf(Integer.parseInt(tokens[1])));
 				break;
 			case "get":
-				System.out.println(l.get(Integer.parseInt(tokens[1])));
-				break;
+				if (Integer.parseInt(tokens[1]) < l.size()) {
+					System.out.println(l.get(Integer.parseInt(tokens[1])));
+					break;
+				} else {
+					System.out.println("");
+					break;
+				}
+				
 			case "contains":
 				System.out.println(l.contains(Integer.parseInt(tokens[1])));
 				break;
