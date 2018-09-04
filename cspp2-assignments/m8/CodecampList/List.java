@@ -31,7 +31,7 @@ public class List {
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
-    /**
+    /**.
      * { item_description }
      */
     private int[] hari;
@@ -54,7 +54,7 @@ public class List {
      * to be accessed by the methods that are outside of the List class.
      *
      */
-    /**
+    /**.
      * { var_description }
      */
     private int size;
@@ -62,7 +62,7 @@ public class List {
     // again, don't initialize it here
     // variable initialization should be done in the constructor
 
-    /*
+    /**.
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
      */
@@ -75,7 +75,7 @@ public class List {
         // it should be initialized with an array size like 10
 
         // Think about the initial value for size.
-        // How many items do we have in the list when you create 
+        // How many items do we have in the list when you create
         // An empty list has how many items?
         // That is the initial value to use for size.
         final int ten = 10;
@@ -130,12 +130,12 @@ public class List {
      * remove(1) would remove the item 2 which is at index position 1.
      * But how do you remove the item from an array?
      * Well, the way to remove it is to move all
-     * the items, that are to the right of the removed item, to the 
+     * the items, that are to the right of the removed item, to the
      * So, the new array looks like this.
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
      */
-    public void remove(int index) {
+    public void remove(final int index) {
         if (index < size) {
             for (int i = index; i < size() - 1; i++) {
                 hari[i] = hari[i + 1];
@@ -159,7 +159,7 @@ public class List {
      * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
      */
-    public int get(int index) {
+    public int get(final int index) {
         return hari[index];
 
     }
@@ -199,7 +199,7 @@ public class List {
      * So, iterate through the list and return true if
      * the item exists and otherwise false
      */
-    public boolean contains(int item) {
+    public boolean contains(final int item) {
         for (int ele : hari) {
             if (ele == item) {
                 return true;
@@ -213,7 +213,7 @@ public class List {
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
-    public int indexOf(int item) {
+    public int indexOf(final int item) {
         for (int i = 0; i < size; i++) {
             if (hari[i] == item) {
                 return i;
@@ -223,7 +223,7 @@ public class List {
         return -1;
     }
 
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
@@ -269,6 +269,8 @@ public class List {
 
             case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
+                break;
+            default :
                 break;
             }
         }
