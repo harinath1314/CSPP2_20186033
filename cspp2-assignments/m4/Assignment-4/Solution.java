@@ -10,14 +10,14 @@ import java.util.Scanner;
 /**.
  * Class for solution.
  */
-public class Solution {
-    /*.
+public final class Solution {
+    /**.
     * this is main string
     */
     private Solution() {
 
     }
-    /**
+    /**.
      * { function_description }
      *
      * @param      args  The arguments
@@ -25,7 +25,6 @@ public class Solution {
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         String s = sc.nextLine();
-        System.out.println();
         String reverse = reverseString(s);
         System.out.println(reverse);
 
