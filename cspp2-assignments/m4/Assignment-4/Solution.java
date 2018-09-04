@@ -14,7 +14,15 @@ public class Solution {
     /*.
     * this is main string
     */
-    public static void main(String[] args) {
+    private Solution() {
+
+    }
+    /**
+     * { function_description }
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         String s = sc.nextLine();
         System.out.println();
@@ -22,16 +30,15 @@ public class Solution {
         System.out.println(reverse);
 
     }
-    /**
+    /**.
      * { function_description }
      *
      * @param      s this is the input string.
      *
      * @return     {the return is a string}
      */
-    static String reverseString(String s) {
+    static String reverseString(final String s) {
         String rever = "";
-        System.out.println(s);
         for (int i = (s.length() - 1); i >= 0; i--) {
             rever += s.charAt(i);
         }
