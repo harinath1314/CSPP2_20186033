@@ -97,7 +97,7 @@ public class List {
      *
      * The method returns void (nothing)
      */
-    /**
+    /**.
      * { function_description }
      *
      * @param      item  The item
@@ -115,7 +115,7 @@ public class List {
      *
      * The method returns an int. Empty list should return 0.
      */
-    /**
+    /**.
      * { function_description }
      *
      * @return     { description_of_the_return_value }
@@ -145,7 +145,7 @@ public class List {
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
      */
-    /**
+    /**.
      * { function_description }
      *
      * @param      index  The index
@@ -174,7 +174,7 @@ public class List {
      * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
      */
-    /**
+    /**.
      * { function_description }
      *
      * @param      index  The index
@@ -206,7 +206,7 @@ public class List {
      * not all the elements of the array.
      *
      */
-    /**
+    /**.
      * Returns a string representation of the object.
      *
      * @return     String representation of the object.
@@ -226,7 +226,7 @@ public class List {
      * So, iterate through the list and return true if
      * the item exists and otherwise false
      */
-    /**
+    /**.
      * { function_description }
      *
      * @param      item  The item
@@ -247,7 +247,7 @@ public class List {
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
-    /**
+    /**.
      * Searches for the first match.
      *
      * @param      item  The item
@@ -263,7 +263,7 @@ public class List {
         }
         return -1;
     }
-    /**
+    /**.
      * { function_description }
      *
      * @param      args  The arguments
