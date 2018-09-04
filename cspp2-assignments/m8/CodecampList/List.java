@@ -256,7 +256,6 @@ public class List {
 					System.out.println(l.get(Integer.parseInt(tokens[1])));
 					break;
 				} else {
-					System.out.println("");
 					break;
 				}
 				
