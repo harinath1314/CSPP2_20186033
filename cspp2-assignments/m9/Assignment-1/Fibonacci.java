@@ -27,6 +27,11 @@ public class Fibonacci {
      *
      * Look for the hint.txt if some of the testcases fail.
      */
+    private Fibonacci() {
+        /**.
+         * { item_description }
+         */
+    }
     /**.
      * { function_description }
      *
