@@ -1,5 +1,6 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
+import java.lang.*;
 /**.
  * main class for solution.
  */
