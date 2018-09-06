@@ -160,7 +160,7 @@ public class List<E> {
     public boolean contains(E item) {
         //Write logic for contains method
         for (E each : list) {
-            if (each == item) {
+            if (each.equals(item)) {
                 return true;
             }
 
