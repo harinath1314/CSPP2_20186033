@@ -296,7 +296,7 @@ public class List {
         // write the logic 
         int count = 0;
         for (int each : list) {
-        	if (list[each] == item) {
+        	if (each == item) {
         		count++;
         	}
         }
