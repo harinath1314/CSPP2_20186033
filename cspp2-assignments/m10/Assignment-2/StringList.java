@@ -142,7 +142,6 @@ public class StringList implements StringListInterface {
             mytalent();
         }
         for (String each : items) {
-            System.out.println(each);
             list[size++] = each;
         }
 
