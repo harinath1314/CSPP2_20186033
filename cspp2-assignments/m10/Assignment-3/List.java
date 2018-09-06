@@ -86,7 +86,7 @@ public class List<E> {
      */
     public void remove(int index) {
         //Write logic for remove method
-        if ( index >= 0 && index <= size) {
+        if ( index >= 0 && index < size) {
         for (int i = index; i < size; i++) {
             list[i] = list[i + 1];
         }
