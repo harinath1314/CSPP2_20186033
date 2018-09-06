@@ -16,11 +16,11 @@ class Student {
     /**.
      * object constructor.
      *
-     * @param      name  The name
+     * @param      names  The name
      */
-    Student(final String name) {
+    Student(final String names) {
         //A constructor used to initialize the instance variables
-        this.name = name;
+        this.name = names;
     }
     /*
      *getter od string.
@@ -53,6 +53,11 @@ class Student {
         Student that = (Student) other;
         return this.getName().equals(that.getName());
     }
+    /**
+     * thisi is to remove a error in checkstyle 
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int hashCode() {
         return this.hashCode();
     }
