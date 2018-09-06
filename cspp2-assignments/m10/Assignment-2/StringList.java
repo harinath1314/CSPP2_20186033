@@ -112,8 +112,9 @@ public class StringList implements StringListInterface {
         size = 0;
     }
 
-    public void mytalent() {
+    public String[] mytalent() {
         list = Arrays.copyOf(list, list.length * list.length);
+        return list;
     }
 
 
