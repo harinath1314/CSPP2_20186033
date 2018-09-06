@@ -235,12 +235,18 @@ public class StringList implements StringListInterface {
      *
      */
     public String toString() {
-        String l = "";
+        if (size != 0) {
+            String l = "";
         for (int i = 0; i < size; i++) {
             l += list[i] + ",";
 
         }
         return ("[" + l.substring(0, l.length() - 1) + "]");
+
+        } else {
+            return "[]";
+        }
+        
 
     }
 
