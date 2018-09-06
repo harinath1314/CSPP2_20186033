@@ -160,11 +160,12 @@ public class List<E> {
     public boolean contains(E item) {
         //Write logic for contains method
         for (E each : list) {
-            if (each.equals(item)) {
+            if (each == item) {
                 return true;
             }
         }
         return false;
+        
     }
     /*
      * Returns the index of the first occurrence

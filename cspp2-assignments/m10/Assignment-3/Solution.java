@@ -4,11 +4,14 @@ import java.util.Scanner;
 /*.
 *class called Student is build.
 */
-/**
+/**.
 * student class
 */
 //thisii s a class called student.
 class Student {
+    /**
+     * { var_description }
+     */
     private String name;
     /**.
      * object constructor.
@@ -40,7 +43,7 @@ class Student {
      *
      * @return     { description_of_the_return_value }
      */
-    public boolean equals(Object other) {
+    public boolean equals(final Object other) {
         //This method is to check if two students
         //names are equal or not
         if (!(other instanceof Student)) {
@@ -62,7 +65,7 @@ class Student {
 /**.
  * class of solution
  */
-public class Solution {
+public final class Solution {
     /**.
      * private constructor
      */
