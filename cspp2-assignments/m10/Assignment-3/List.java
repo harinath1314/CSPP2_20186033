@@ -159,8 +159,14 @@ public class List<E> {
      */
     public boolean contains(E item) {
         //Write logic for contains method
-        for (E each : list) {
-            if (each == item) {
+        // for (E each : list) {
+        //     if (each == item) {
+        //         return true;
+        //     }
+        // }
+        // return false;
+        for (int i = 0; i < size; i++) {
+            if (list[i] == item) {
                 return true;
             }
         }
