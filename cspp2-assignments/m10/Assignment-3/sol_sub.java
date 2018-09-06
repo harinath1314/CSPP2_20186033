@@ -1,6 +1,8 @@
+import java.io.BufferedInputStream;
+import java.util.Scanner;
 public class sol_sub {
-    
-    public static void main(final String[] args) {
+
+    public void mai() {
             // create an object of the list to invoke methods on it
             Scanner stdin = new Scanner(
                 new BufferedInputStream(System.in));

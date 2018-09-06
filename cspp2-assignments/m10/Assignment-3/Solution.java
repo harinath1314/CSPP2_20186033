@@ -1,5 +1,3 @@
-import java.io.BufferedInputStream;
-import java.util.Scanner;
 //A Class is implemented for Student details
 /*.
 *class called Student is build.
@@ -53,8 +51,8 @@ class Student {
         Student that = (Student) other;
         return this.getName().equals(that.getName());
     }
-    /**
-     * thisi is to remove a error in checkstyle 
+    /**.
+     * thisi is to remove a error in checkstyle
      *
      * @return     { description_of_the_return_value }
      */
@@ -88,6 +86,10 @@ public final class Solution {
      *
      * @param      args  The arguments
      *
-     */ 
+     */
+    public static void main(String[] args) {
+        sol_sub hari = new sol_sub();
+        hari.mai();
+    }
 }
 
