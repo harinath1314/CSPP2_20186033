@@ -32,7 +32,7 @@ public class List {
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
-    /*
+    /**.
     * thisis a private list
     */
     private int[] list;
@@ -63,6 +63,8 @@ public class List {
     /*
     *this is a private variable.
     */
+    /**.this is a private size.
+    */
     private int size;
 
     /*
@@ -71,8 +73,8 @@ public class List {
      */
 
 
-    /**
-     * constructor 
+    /**.
+     * constructor
      */
     public List() {
 
@@ -105,12 +107,12 @@ public class List {
      * constructor.
      *
      */
-    /**
-     * list method 
+    /**.
+     * list method
      *
      * @param      capacity  The capacity
      */
-    public List(int capacity) {
+    public List(final int capacity) {
         size = 0;
         list = new int[capacity];
     }
@@ -132,7 +134,7 @@ public class List {
      *
      * The method returns void (nothing)
      */
-    /**
+    /**.
      * add function
      *
      * @param      item  The item
@@ -213,7 +215,7 @@ public class List {
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
      */
-    /**
+    /**.
      * remove function
      *
      * @param      index  The index
@@ -336,6 +338,7 @@ public class List {
      array to the end of list*/
     /**.
      * { item_description }
+     * @param items is the item given.
      */
     public void addAll(final int[] items) {
         if (items.length + size >= list.length) {
@@ -355,7 +358,7 @@ public class List {
     by moving all the elements to the right.
            The method returns void (nothing)
         */
-    /**
+    /**.
      * add funcion
      *
      * @param      index  The index
@@ -423,7 +426,7 @@ public class List {
                     } else {
                         if (t.length > 1) {
                             l.add(Integer.parseInt(t[0]),
-                                Integer.parseInt(t[1]));
+                                  Integer.parseInt(t[1]));
                         }
                     }
                 }
