@@ -87,7 +87,7 @@ public final class Solution {
      * @param      args  The arguments
      *
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         sol_sub hari = new sol_sub();
         hari.mai();
     }
