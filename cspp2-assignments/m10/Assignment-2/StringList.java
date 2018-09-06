@@ -1,5 +1,8 @@
 //An interface for ListADT of strings
 import java.util.Arrays;
+import java.util.Scanner;
+import java.util.Arrays;
+import java.io.BufferedInputStream;
 interface StringListInterface
 {
 	 public void add(String item);
@@ -12,7 +15,7 @@ interface StringListInterface
 }
 //Write a StringList class which implements StringListInterface 
 
-public class StringList implements StringListInterface{
+public class StringList implements StringListInterface {
 	//Implement all the methods mentioned to build a ListADT
 
     /*
@@ -105,7 +108,14 @@ public class StringList implements StringListInterface{
      * 
      */
 
-    // todo - add an overloaded constructor here
+    public StringList(final int n) {
+    	list = new String[n];
+    	size = 0;
+    }
+
+    public void mytalent() {
+    	list = Arrays.copyOf(list, list.length*list.length);
+    }
 
     
     /*
@@ -121,12 +131,20 @@ public class StringList implements StringListInterface{
      */
     public void add(String item) {
         //Inserts the specified element at the end of the list.
+        list[size++] = item;
+
        
     }
     /*Inserts all the elements of specified int 
     array to the end of list*/
    
     public void addAll(String[] items) {
+    	if (items.length + size >= list.length) {
+    		mytalent();
+    	}
+    	for (String each : items) {
+    		list[size++] = each;
+    	}
 		
 	}
     /*
@@ -137,7 +155,12 @@ public class StringList implements StringListInterface{
      * The method returns an int. Empty list should return 0.
      */
     public int size() {
-        return size;
+    	if (list.length != 0){
+    		return size;
+    	} else {
+    		return 0;
+    	}
+        
     }
 
     /*
@@ -164,7 +187,15 @@ public class StringList implements StringListInterface{
     public void remove(int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
-       
+       if (index < size) {
+            for (int i = index; i < size() - 1; i++) {
+                list[i] = list[i + 1];
+
+            }
+            size -= 1;
+        } else {
+            System.out.println("Invalid Position Exception");
+        }
     }
 
     /*
@@ -179,6 +210,7 @@ public class StringList implements StringListInterface{
      * number of items in the list? Would size variable be useful?
      */
     public String get(int index) {
+    	return list[index];
         
     }
 
@@ -203,6 +235,12 @@ public class StringList implements StringListInterface{
      *
      */
     public String toString() {
+    	String l = "";
+        for (int i = 0; i < size; i++) {
+            l += list[i] + ",";
+
+        }
+        return ("[" + l.substring(0, l.length() - 1) + "]");
        
     }
     
@@ -213,7 +251,12 @@ public class StringList implements StringListInterface{
      * the item exists and otherwise false
      */
     public boolean contains(String item) {
-        
+    	for (String ele : list) {
+            if (ele == item) {
+                return true;
+            }
+        }
+        return false;
     }
 
     /*
@@ -222,6 +265,70 @@ public class StringList implements StringListInterface{
      * or -1 if this list does not contain the element.
      */
     public int indexOf(String item) {
+    	for (int i = 0; i < list.length; i++) {
+			if (list[i] == item) {
+				return i;
+			}   		
+    	}
+    	return -1;
         
     }
+    /**.
+     * { function_description }
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
+        // create an object of the list to invoke methods on it
+        StringList l = new StringList();
+
+
+        // code to read the test cases input file
+        Scanner stdin = new Scanner(new BufferedInputStream(System.in));
+        // check if there is one more line to process
+        while (stdin.hasNext()) {
+            // read the line
+            String line = stdin.nextLine();
+            // split the line using space
+            String[] tokens = line.split(" ");
+            // based on the list operation invoke functions
+            switch (tokens[0]) {
+            case "add":
+                l.add(tokens[1]);
+                break;
+            case "size":
+                // invoke size method and print the list size
+                // BTW, list size is not the array size
+                // it is the number of items in the list
+                System.out.println(l.size());
+                break;
+            case "print":
+                // print the list (implement toString for this to work)
+                // expected format is [item-1,item-2,...,item-n]
+                // review the output testcase file
+                System.out.println(l);
+                break;
+            case "remove":
+                l.remove(Integer.parseInt(tokens[1]));
+                break;
+            case "indexOf":
+                System.out.println(l.indexOf(tokens[1]));
+                break;
+            case "get":
+                if (Integer.parseInt(tokens[1]) < l.size()) {
+                    System.out.println(l.get(Integer.parseInt(tokens[1])));
+                    break;
+                } else {
+                    break;
+                }
+
+            case "contains":
+                System.out.println(l.contains(tokens[1]));
+                break;
+            default :
+                break;
+            }
+
+		}
+	}
 }
