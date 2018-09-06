@@ -1,5 +1,6 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class List {
     //Implement all the methods mentioned to build a ListADT
@@ -96,6 +97,9 @@ public class List {
     public List(int capacity) {
         size = 0;
         list = new int[capacity];
+    }
+    public void mytalent() {
+        list = Arrays.copyOf(list,list.length * list.length);
     }
 
     /*
@@ -268,7 +272,13 @@ public class List {
     /*Inserts all the elements of specified int
      array to the end of list*/
     public void addAll(int items[]) {
+        if(items.length + size >= list.length) {
+            mytalent();
+        }
+
         // write the logic
+        // int n = list.length + items.length;
+        // List list = new List(n);
         for (int i = 0; i < items.length; i++) {
             list[size++] = items[i];
         }
