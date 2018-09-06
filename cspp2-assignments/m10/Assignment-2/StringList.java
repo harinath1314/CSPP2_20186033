@@ -140,7 +140,7 @@ public class StringList implements StringListInterface {
 
     public void addAll(String[] items) {
         if (items.length + size >= list.length) {
-            mytalent();
+            list = mytalent();
         }
         for (String each : items) {
             list[size++] = each;
