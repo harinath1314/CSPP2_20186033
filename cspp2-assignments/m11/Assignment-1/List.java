@@ -430,7 +430,8 @@ public class List {
                                         Integer.parseInt(arrstring3[1]));
                 if (object != null)
                     System.out.println(object);
-                else System.out.println("Index Out of Bounds Exception");
+                else System.out.println(object); 
+                    System.out.println("Index Out of Bounds Exception");
                 break;
             }
             case "equals":
