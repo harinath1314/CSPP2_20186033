@@ -316,7 +316,7 @@ public class List {
     public List subList(final int start, final  int end) {
         // write the logic for subList
         List subliste = new List();
-        if (start >= 0 && start < end) {
+        if (start >= 0 && start < end && size >= end) {
             for (int i = start; i < end; i++) {
                 subliste.add(list[i]);
             }
