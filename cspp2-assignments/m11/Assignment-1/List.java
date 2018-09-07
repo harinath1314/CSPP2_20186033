@@ -360,7 +360,6 @@ public class List {
         int newsize = size;
         for (int i = 0; i < newsize; i++) {
             remove(0);
-            System.out.println(i + "," +size);
         }
     }
     /**.
