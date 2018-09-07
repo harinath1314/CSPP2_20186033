@@ -63,7 +63,7 @@ public class List<E> {
      * The method returns an int. Empty list should return 0.
      */
     public int size() {
-        return 0;
+        return size;
     }
     /*
      * The remove method does what the name suggests.
