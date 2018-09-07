@@ -148,8 +148,8 @@ public class List {
         // write the logic for remove here. Think about what to do to the size
         // variable.
         if (index >= 0 && index < size) {
-            for (int i = index; i < size - 1; i++) {
-                list[i] = list[i + 1];
+            for (int k = index; k < size - 1; k++) {
+                list[k] = list[k + 1];
             }
             size--;
         } else {
@@ -357,13 +357,11 @@ public class List {
      */
     public void clear() {
         // write the logic for clear.
-        for (int i = 0; i < size; i++) {
-            // if (contains(list[i])) {
-            //     remove(indexOf(list[i]));
-            // }
+        int newsize = size;
+        for (int i = 0; i < newsize; i++) {
             remove(0);
+            System.out.println(i + "," +size);
         }
-
     }
     /**.
     *this is the main function.
