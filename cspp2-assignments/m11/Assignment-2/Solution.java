@@ -19,7 +19,7 @@ class Student {
     /**
      * Constructs the object.
      *
-     * @param      name  The name
+     * @param      nameses  The name
      */
     Student(final String nameses) { //A constructor
         //usedto initialize the instance variables
@@ -45,7 +45,7 @@ class Student {
         Student that = (Student) other;
         return this.getName().equals(that.getName());
     }
-    @Override 
+    @Override
     public int hashCode() {
         return 0;
     }
