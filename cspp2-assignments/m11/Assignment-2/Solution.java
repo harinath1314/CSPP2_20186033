@@ -1,9 +1,26 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
+/**
+* autor : harinatha reddy
+* date : 07/09/18
+* file : generic ATD
+*/
 //A Class is implemented for Student details
+/**
+*/
+/**.
+ * Class for student.
+ */
 class Student {
+    /**.
+     * private string.
+     */
     private String name;
-
+    /**
+     * Constructs the object.
+     *
+     * @param      name  The name
+     */
     public Student(String name) {//A constructor used to initialize the instance variables
         this.name = name;
     }
@@ -475,11 +492,9 @@ public class Solution {
         case "S"://This case will be executed for String type list
             executeListString(stdin);
             break;
-
         case "I"://This case will be executed for Integer type list
             executeListInteger(stdin);
             break;
-
         case "F"://This case will be executed for Float type list
             executeListFloat(stdin);
             break;
