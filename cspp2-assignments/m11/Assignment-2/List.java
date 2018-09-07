@@ -220,12 +220,14 @@ public class List<E> {
      */
     public boolean equals(List<E> listdata) {
         if (listdata.size() == this.size()) {
-            if (listdata.toString().equals(this.toString())) {
-                return true;
-            }
-            return false;
+            return (listdata.toString().equals(this.toString()));
         }
         return false;
+        //         return true;
+        //     }
+        //     return false;
+        // }
+        // return false;
     }
     /*Removes all the elements from list*/
     public void clear() {
