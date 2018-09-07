@@ -252,7 +252,7 @@ public class List {
     public boolean equals(List list ) {
         // Replace the code below
         if ( list.size() == this.size()) {
-            if (list.equals(this)) {
+            if (list.toString().equals(this.toString())){
                 return true;
             } else {
                 return false;
