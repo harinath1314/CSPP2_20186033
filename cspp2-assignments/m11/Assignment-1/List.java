@@ -1,7 +1,9 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
-
+/**.
+ * class of lsit.
+ */
 public class List {
     //Implement all the methods mentioned to build a ListADT
 
@@ -30,6 +32,9 @@ public class List {
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
+    /**
+    *private list.
+    */
     private int[] list;
 
     /*
@@ -61,6 +66,9 @@ public class List {
      * The purpose of the constructor is to initialize the class variables with
      * some default values.
      */
+    /**
+     * Constructs the object.
+     */
     public List() {
 
         // what are the two variables to be initialized here? think about the
@@ -85,6 +93,11 @@ public class List {
      *
      * The method returns void (nothing)
      */
+    /**.
+     * add function.
+     *
+     * @param      item  The item
+     */
     public void add(int item) {
         //Inserts the specified element at the end of the list.
         list[size++] = item;
@@ -96,6 +109,11 @@ public class List {
      *
      * The method returns an int. Empty list should return 0.
      *
+     */
+    /**
+     *  returns the size of list.
+     *
+     * @return     { description_of_the_return_value }
      */
     public int size() {
         // replace the code below to implement the size method
@@ -116,14 +134,19 @@ public class List {
      * [1,3,0,0,0,0,0,0,0,0] The method returns void (nothing)
      *
      */
+    /**
+     * remove the element in index.
+     *
+     * @param      index  The index
+     */
     public void remove(int index) {
         // write the logic for remove here. Think about what to do to the size
         // variable.
         if (index >= 0 && index < size) {
-            for (int i = index; i < size-1 ; i++) {
+            for (int i = index; i < size - 1 ; i++) {
                 list[i] = list[i + 1];
             }
-        size--;
+            size--;
         } else {
             System.out.println("Invalid Position Exception");
         }
@@ -137,6 +160,13 @@ public class List {
      * the number of items in the list then that would mean the item doesn't
      * exist. How do we check if the position is greater than the number of
      * items in the list? Would size variable be useful?
+     */
+    /**.
+     * get the elemenet  in that index.
+     *
+     * @param      index  The index
+     *
+     * @return     { description_of_the_return_value }
      */
     public int get(int index) {
         // Replace the code below to write the code for get
@@ -160,6 +190,11 @@ public class List {
      * Example: [1,2,3,0,0,0,0,0,0,0] toString should only return the items in
      * the list and not all the elements of the array.
      */
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         // Replace the code below
         if (size == 0)
@@ -177,6 +212,13 @@ public class List {
      * the method So, iterate through the list and return true if the item
      * exists and otherwise false
      */
+    /**
+     * returns true if item is present.
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
     public boolean contains(int item) {
         // Replace the code below
         for (int i = 0; i < size; i++) {
@@ -191,6 +233,13 @@ public class List {
      * Returns the index of the first occurrence of the specified element in
      * this list, or -1 if this list does not contain the element.
      */
+    /**
+     * indexOf gives the index of item.
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int indexOf(int item) {
         // Replace the code below
         for (int  i = 0; i < size; i++) {
@@ -203,10 +252,14 @@ public class List {
     /*
     Inserts all the elements of specified int array to the end of list
     */
+    /**.
+     *
+     */
     public void resize() {
         list = Arrays.copyOf(list, list.length * 2);
     }
-
+    /**
+    */
     public void addAll(int[] newArray) {
         // write the logic
         if (size + newArray.length >= list.length) {
@@ -236,6 +289,14 @@ public class List {
     "Index Out of Bounds Exception" if any of values start and end are negative
     and also if start is greater than end.
     */
+    /**
+     * sublist returns a list from strat to endindex.
+     *
+     * @param      start  The start
+     * @param      end    The end
+     *
+     * @return     { description_of_the_return_value }
+     */
     public List subList(int start, int end) {
         // write the logic for subList
         List sublist_ = new List();
@@ -253,10 +314,17 @@ public class List {
     Returns a boolean indicating whether the parameter i.e a List object is
     exactly matching with the given list or not.
     */
+    /**
+     * returns true if equal .
+     *
+     * @param      list  The list
+     *
+     * @return     { description_of_the_return_value }
+     */
     public boolean equals(List list ) {
         // Replace the code below
         if ( list.size() == this.size()) {
-            if (list.toString().equals(this.toString())){
+            if (list.toString().equals(this.toString())) {
                 return true;
             } else {
                 return false;
@@ -270,6 +338,9 @@ public class List {
     * Think about this case and make the method
     * the simpler.
     */
+    /**
+     * clear function.
+     */
     public void clear() {
         // write the logic for clear.
         for (int i = 0; i < size; i++) {
@@ -280,7 +351,9 @@ public class List {
         }
 
     }
-
+    /**.
+    *this is th emain function.
+    */
     public static void main(String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
