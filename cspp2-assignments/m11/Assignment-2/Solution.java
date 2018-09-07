@@ -97,7 +97,6 @@ public class Solution {
                     List object = l.subList(Integer.parseInt(arrstring3[0]), Integer.parseInt(arrstring3[1]));
                     if (object != null) 
                         System.out.println(object);
-                    else System.out.println("Index Out of Bounds Exception");
                     break;
                 }
                 case "equals":
