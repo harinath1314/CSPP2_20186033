@@ -120,9 +120,12 @@ public class List {
         // write the logic for remove here. Think about what to do to the size
         // variable.
         if (index >= 0 && index < size) {
-            for (int i = index; i > size; i++) {
+            for (int i = index; i < size-1 ; i++) {
                 list[i] = list[i + 1];
             }
+        size--;
+        } else {
+            System.out.println("Invalid Position Exception");
         }
     }
 
@@ -160,7 +163,7 @@ public class List {
     public String toString() {
         // Replace the code below
         if (size == 0)
-            return "";
+            return "[]";
         String str = "[";
         int i = 0;
         for (i = 0; i < size - 1; i++) {
@@ -219,9 +222,10 @@ public class List {
     */
     public void removeAll(int[] newArray) {
         // write the logic
-        final int zero = 0;
-        for (int each : newArray) {
-            each = zero;
+        for (int i = 0; i < newArray.length; i++) {
+            if (contains(newArray[i])) {
+                remove(indexOf(newArray[i]));
+            }
         }
 
     }
@@ -268,7 +272,12 @@ public class List {
     */
     public void clear() {
         // write the logic for clear.
-        removeAll(list);
+        for (int i = 0; i < size; i++) {
+            // if (contains(list[i])) {
+            //     remove(indexOf(list[i]));
+            // }
+            remove(0);
+        }
 
     }
 
