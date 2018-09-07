@@ -35,16 +35,24 @@ public class List<E> {
         //Inserts the specified element at the end of the list.
         //You can modify the code in this method.
         // list[(size++)] = item;
+        list[size++] = item;
     }
     /*Inserts all the elements of specified int
     array to the end of list*/
     public void addAll(E[] items) {
         //Write logic for addAll method
+        if ((items.length + size) > list.length) {
+            resize();
+        }
+        for (E each : items) {
+            add(each);
+        }
     }
     /**
      * { function_description }
      */
-    private void resize(){
+    private void resize() {
+        list = Arrays.copyOf(list, list.length * list.length);
     }
 
     /*
@@ -55,7 +63,7 @@ public class List<E> {
      * The method returns an int. Empty list should return 0.
      */
     public int size() {
-    	return 0;
+        return 0;
     }
     /*
      * The remove method does what the name suggests.
@@ -79,6 +87,14 @@ public class List<E> {
      */
     public void remove(int index) {
         //Write logic for remove method
+        if (index >= 0 && index < size) {
+            for (int k = index; k < size - 1; k++) {
+                list[k] = list[k + 1];
+            }
+            size--;
+        } else {
+            System.out.println("Invalid Position Exception");
+        }
     }
     /*
      * Get method has to return the items that is
@@ -92,9 +108,13 @@ public class List<E> {
      * number of items in the list? Would size variable be useful?
      */
     public E get(int index) {
-         //Write logic for get method
+        //Write logic for get method
         // return list[index];
-        return null;
+        if (index >= 0 && index < size) {
+            return list[index];
+        } else {
+            return null;
+        }
     }
     /*
      * What happens when you print an object using println?
@@ -118,7 +138,16 @@ public class List<E> {
      */
     public String toString() {
 
-       return "print the list";
+        if (size == 0) {
+            return "[]";
+        }
+        String str = "[";
+        int i = 0;
+        for (i = 0; i < size - 1; i++) {
+            str = str + list[i] + ",";
+        }
+        str = str + list[i] + "]";
+        return str;
     }
     /*
      * Contains return true if the list has
@@ -127,8 +156,14 @@ public class List<E> {
      * the item exists and otherwise false
      */
     public boolean contains(E item) {
-		//Write logic for contains method
-        return true;
+        //Write logic for contains method
+        for (int i = 0; i < size; i++) {
+            if (list[i] == (item)) {
+                return true;
+            }
+
+        }
+        return false;
 
     }
     /*
@@ -138,16 +173,28 @@ public class List<E> {
      */
 
     public int indexOf(E item) {
-       //Write logic for indexOf method
+        //Write logic for indexOf method
+        for (int  i = 0; i < size; i++) {
+            if (list[i] == (item)) {
+                return i;
+            }
+        }
         return -1;
     }
 
     /* Removes all of its elements that
      * are contained in the specified int array.
      */
-    public void removeAll(E[] items)
-    {
+    public void removeAll(E[] items) {
         // write the logic
+        for (E each  : items   ) {
+            for (int i = 0; i < items.length; i++) {
+                if (contains(items[i])) {
+                    remove(indexOf(items[i]));
+                }
+            }
+        }
+
     }
 
     /*Returns a list containing elements, including
@@ -155,20 +202,36 @@ public class List<E> {
      indicates the startIndex and the second parameter
      indicates the endIndex.
      */
-    public List subList(int n, int n2) {
+    public List subList(int start, int end) {
 
-        return null;
+        List subliste = new List();
+        if (start >= 0 && start < end && size >= end) {
+            for (int i = start; i < end; i++) {
+                subliste.add(list[i]);
+            }
+            return subliste;
+        } else {
+            return null;
+        }
     }
     /*Returns a boolean indicating whether the parameter
       i.e a List object is exactly matching with the given list or not.
      */
-    public boolean equals(List<E> listdata)
-    {
-        return true;
+    public boolean equals(List<E> listdata) {
+        if (listdata.size() == this.size()) {
+            if (listdata.toString().equals(this.toString())) {
+                return true;
+            }
+            return false;
+        }
+        return false;
     }
     /*Removes all the elements from list*/
-    public void clear()
-    {
+    public void clear() {
         // write the logic for clear.
+        int newsize = size;
+        for (int i = 0; i < newsize; i++) {
+            remove(0);
+        }
     }
 }
