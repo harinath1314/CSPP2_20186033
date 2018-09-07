@@ -60,7 +60,7 @@ public class List {
     // declare a private int size
     // again, don't initialize it here
     // variable initialization should be done in the constructor
-    
+
     /**.
      * thisiis  probvate int sixe.
      */
@@ -262,7 +262,7 @@ public class List {
      *
      */
     public void resize() {
-        list = Arrays.copyOf(list, list.length * 2);
+        list = Arrays.copyOf(list, list.length * list.length);
     }
     /**
     */
@@ -284,11 +284,11 @@ public class List {
      Removes all of its elements that are contained in the specified int
      array.
     */
-     /**
-      * Removes all.
-      *
-      * @param      newArray  The new array
-      */
+    /**
+     * Removes all.
+     *
+     * @param      newArray  The new array
+     */
     public void removeAll(final int[] newArray) {
         // write the logic
         for (int i = 0; i < newArray.length; i++) {
@@ -313,7 +313,7 @@ public class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public List subList(final int start,final  int end) {
+    public List subList(final int start, final  int end) {
         // write the logic for subList
         List subliste = new List();
         if (start >= 0 && start < end) {
@@ -332,7 +332,7 @@ public class List {
     /**
      * returns true if equal .
      *
-     * @param      list  The list
+     * @param      listss  The list
      *
      * @return     { description_of_the_return_value }
      */
@@ -342,10 +342,10 @@ public class List {
             if (listss.toString().equals(this.toString())) {
                 return true;
             }
-                return false;
-        }
             return false;
-        
+        }
+        return false;
+
     }
     /*
     * Removes all the elements from list
@@ -366,7 +366,7 @@ public class List {
 
     }
     /**.
-    *this is th emain function.
+    *this is the main function.
     */
     /**.
      * main function starts here.
@@ -444,8 +444,8 @@ public class List {
                     l.removeAll(a);
                 }
                 break;
-            case "subList": 
-                if (tokens.length != 2) { 
+            case "subList":
+                if (tokens.length != 2) {
                     break;
                 }
                 String[] arrstring3 = tokens[1].split(",");
@@ -453,10 +453,9 @@ public class List {
                                         Integer.parseInt(arrstring3[1]));
                 if (object != null) {
                     System.out.println(object);
-                }
-                else {
+                } else {
                     System.out.println("Index Out of Bounds Exception");
-                    }
+                }
                 break;
 
             case "equals":
