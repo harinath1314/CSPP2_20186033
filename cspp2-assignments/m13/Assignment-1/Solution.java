@@ -68,13 +68,9 @@ class Set {
      * @param      val   The value
      */
     public void add(int val) {
-        for (int i = 0; i < size; i++) {
-            if (hari[i] == (val)) {
-                break;
+            if (!contains(val)) {
+                hari[size++] = val;
             }
-        }
-        hari[size++] = val;
-
     }
     /**
      * add function for add ing array to set.
