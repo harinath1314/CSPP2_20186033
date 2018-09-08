@@ -52,7 +52,7 @@ class Set {
         if (size != 0) {
             String l = "";
         for (int i = 0; i < size; i++) {
-            l += hari[i] + ",";
+            l += hari[i] + ", ";
 
         }
         return ("{" + l.substring(0, l.length() - 1) + "}");
