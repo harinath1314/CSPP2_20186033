@@ -5,40 +5,40 @@ import java.util.*;
 
 /**
  * Class for set.
- * @author : 
+ * @author :
  */
 class Set {
     //your code goes here...
     //Good luck :-)
-    
-        private int[] hari;
-        private int[] newset;
-        private int size;
+
+    private int[] hari;
+    private int[] newset;
+    private int size;
     public Set() {
-                hari = new int[50];
-                size = 0;
-                newset = new int[50];
-            }
-        /**
-     * returns a sixe of set
-     *
-     * @return     { description_of_the_return_value }
-     */
+        hari = new int[50];
+        size = 0;
+        newset = new int[50];
+    }
+    /**
+    * returns a sixe of set
+    *
+    * @return     { description_of_the_return_value }
+    */
     public int size() {
         return size;
     }
-     /**
-      * contains function.
-      *
-      * @param      val   The value we give to check.
-      *
-      * @return     true or false
-      */
+    /**
+     * contains function.
+     *
+     * @param      val   The value we give to check.
+     *
+     * @return     true or false
+     */
     public boolean contains(int val) {
         for (int i = 0; i < size; i++) {
             if (hari[i] == (val)) {
-             return true;
-            }            
+                return true;
+            }
         }
         return false;
 
@@ -51,11 +51,11 @@ class Set {
     public String toString() {
         if (size != 0) {
             String l = "";
-        for (int i = 0; i < size; i++) {
-            l += hari[i] + ", ";
+            for (int i = 0; i < size; i++) {
+                l += hari[i] + ", ";
 
-        }
-        return ("{" + l.substring(0, l.length() - 2) + "}");
+            }
+            return ("{" + l.substring(0, l.length() - 2) + "}");
 
         } else {
             return "{}";
@@ -68,17 +68,17 @@ class Set {
      * @param      val   The value
      */
     public void add(int val) {
-            if (!contains(val)) {
-                hari[size++] = val;
-            }
+        if (!contains(val)) {
+            hari[size++] = val;
+        }
     }
     /**
      * add function for add ing array to set.
      *
      * @param      array  The array
      */
-    public void resize(){
-        hari = Arrays.copyOf(hari,hari.length * 14);
+    public void resize() {
+        hari = Arrays.copyOf(hari, hari.length * 14);
     }
 
     public void add(int[] array) {
@@ -130,7 +130,7 @@ class Set {
     // public int[] cartesianProduct(int giveset) {
     //     return hari;
 
-        
+
 
     // }
 }
@@ -164,8 +164,8 @@ public final class Solution {
             input = s.substring(1, s.length() - 1);
         }
         return Arrays.stream(input.split(","))
-                            .mapToInt(Integer::parseInt)
-                            .toArray();
+               .mapToInt(Integer::parseInt)
+               .toArray();
     }
     /**
      * main function to execute test cases.
@@ -185,16 +185,16 @@ public final class Solution {
             String[] tokens = line.split(" ");
             // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
-                case "size":
+            case "size":
                 System.out.println(s.size());
                 break;
-                case "contains":
+            case "contains":
                 System.out.println(s.contains(Integer.parseInt(tokens[1])));
                 break;
-                case "print":
+            case "print":
                 System.out.println(s);
                 break;
-                case "add":
+            case "add":
                 int[] intArray = intArray(tokens[1]);
                 if (intArray.length == 1) {
                     s.add(intArray[0]);
@@ -202,32 +202,32 @@ public final class Solution {
                     s.add(intArray);
                 }
                 break;
-                // case "intersection":
-                // s = new Set();
-                // Set t = new Set();
-                // intArray = intArray(tokens[1]);
-                // s.add(intArray);
-                // intArray = intArray(tokens[2]);
-                // t.add(intArray);
-                // System.out.println(s.intersection(t));
-                // break;
-                // case "retainAll":
-                // s = new Set();
-                // intArray = intArray(tokens[1]);
-                // s.add(intArray);
-                // intArray = intArray(tokens[2]);
-                // System.out.println(s.retainAll(intArray));
-                // break;
-                // case "cartesianProduct":
-                // s = new Set();
-                // t = new Set();
-                // intArray = intArray(tokens[1]);
-                // s.add(intArray);
-                // intArray = intArray(tokens[2]);
-                // t.add(intArray);
-                // System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
-                // break;
-                default:
+            // case "intersection":
+            // s = new Set();
+            // Set t = new Set();
+            // intArray = intArray(tokens[1]);
+            // s.add(intArray);
+            // intArray = intArray(tokens[2]);
+            // t.add(intArray);
+            // System.out.println(s.intersection(t));
+            // break;
+            // case "retainAll":
+            // s = new Set();
+            // intArray = intArray(tokens[1]);
+            // s.add(intArray);
+            // intArray = intArray(tokens[2]);
+            // System.out.println(s.retainAll(intArray));
+            // break;
+            // case "cartesianProduct":
+            // s = new Set();
+            // t = new Set();
+            // intArray = intArray(tokens[1]);
+            // s.add(intArray);
+            // intArray = intArray(tokens[2]);
+            // t.add(intArray);
+            // System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
+            // break;
+            default:
                 break;
             }
         }
