@@ -1,26 +1,31 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
-import java.util.*;
 
 /**
  * Class for set.
- * @author :
+ * @author : harinatha reddy
+ * date : 08/09/18
  */
 class Set {
     //your code goes here...
     //Good luck :-)
-
+    /**
+    */
     private int[] hari;
     private int[] newset;
     private int size;
+    /**
+     * Constructs the object.
+     */
     public Set() {
-        hari = new int[50];
+        final int fifty = 50;
+        hari = new int[fifty];
         size = 0;
-        newset = new int[50];
+        newset = new int[fifty];
     }
     /**
-    * returns a sixe of set
+    * returns a sixe of set.
     *
     * @return     { description_of_the_return_value }
     */
@@ -34,7 +39,7 @@ class Set {
      *
      * @return     true or false
      */
-    public boolean contains(int val) {
+    public boolean contains(final int val) {
         for (int i = 0; i < size; i++) {
             if (hari[i] == (val)) {
                 return true;
@@ -62,26 +67,27 @@ class Set {
         }
 
     }
-    /**
-     * { function_description }
+    /**.
+     * { function_description }.
      *
      * @param      val   The value
      */
-    public void add(int val) {
+    public void add(final int val) {
         if (!contains(val)) {
             hari[size++] = val;
         }
     }
-    /**
+
+    public void resize() {
+        final int four = 14;
+        hari = Arrays.copyOf(hari, hari.length * four);
+    }
+    /**.
      * add function for add ing array to set.
      *
      * @param      array  The array
      */
-    public void resize() {
-        hari = Arrays.copyOf(hari, hari.length * 14);
-    }
-
-    public void add(int[] array) {
+    public void add(final int[] array) {
         if ((array.length + size) > hari.length) {
             resize();
         }
