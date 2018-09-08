@@ -13,12 +13,18 @@ class Set {
     /**
     */
     private int[] hari;
+    /**.
+     * { var_description }
+     */
     private int[] newset;
+    /**.
+     * { var_description }
+     */
     private int size;
     /**
      * Constructs the object.
      */
-    public Set() {
+    Set() {
         final int fifty = 50;
         hari = new int[fifty];
         size = 0;
@@ -77,7 +83,9 @@ class Set {
             hari[size++] = val;
         }
     }
-
+    /**.
+     * { function_description }
+     */
     public void resize() {
         final int four = 14;
         hari = Arrays.copyOf(hari, hari.length * four);
@@ -133,12 +141,24 @@ class Set {
     //  *
     //  * @return     { description_of_the_return_value }
     //  */
-    // public int[] cartesianProduct(int giveset) {
-    //     return hari;
+    // public int[][] cartesianProduct(int [] that) {
+    //     int[][] a = new int[25][25];
+    //     final int i = this.size();
+    //     final int j = that.length;
+    //     for (int k = 0; k < i; k++) {
+    //         for (int l = 0; l < j; l++) {
+    //             int helper = 0;
+    //             a[k][0] = helper++;
+    //             a[k][1] = that[j];            
+    //         }
+            
+    //     }
+
+    //     return a;
 
 
 
-    // }
+    //  }
 }
 
 
