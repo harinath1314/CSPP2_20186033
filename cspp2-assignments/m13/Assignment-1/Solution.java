@@ -149,9 +149,9 @@ class Set {
     //         for (int l = 0; l < j; l++) {
     //             int helper = 0;
     //             a[k][0] = helper++;
-    //             a[k][1] = that[j];            
+    //             a[k][1] = that[j];
     //         }
-            
+
     //     }
 
     //     return a;
