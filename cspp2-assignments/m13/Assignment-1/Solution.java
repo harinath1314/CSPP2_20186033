@@ -55,7 +55,7 @@ class Set {
             l += hari[i] + ", ";
 
         }
-        return ("{" + l.substring(0, l.length() - 1) + "}");
+        return ("{" + l.substring(0, l.length() - 2) + "}");
 
         } else {
             return "{}";
