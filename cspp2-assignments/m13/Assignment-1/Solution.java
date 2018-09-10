@@ -252,7 +252,6 @@ public final class Solution {
                 s = new Set();
                 intArray = intArray(tokens[1]);
                 s.add(intArray);
-                System.out.println(s);
                 intArray = intArray(tokens[2]);
                 System.out.println(s.retainAll(intArray));
                 break;
