@@ -138,7 +138,7 @@ class Set {
      *
      * @return     returns a set.
      */
-    public Set retainAll(final int[] arr) {
+    public Set retainAll(int[] arr) {
         Set other = new Set();
         for (int item : arr) {
             other.add(item);
@@ -166,6 +166,7 @@ class Set {
             }
         }
         return result;
+    }
 }
 
 
@@ -181,8 +182,8 @@ public final class Solution {
      */
     private Solution() {
 
+    
     }
-}
     /**
      * helper function to convert string input to int array.
      *
@@ -212,6 +213,7 @@ public final class Solution {
         Set s = new Set();
         // code to read the test cases input file
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
+
         // check if there is one more line to process
         while (stdin.hasNext()) {
             // read the line
@@ -221,6 +223,7 @@ public final class Solution {
             // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
             case "size":
+                System.out.println(tokens[0]);
                 System.out.println(s.size());
                 break;
             case "contains":
@@ -238,35 +241,34 @@ public final class Solution {
                 }
                 break;
             case "intersection":
-            s = new Set();
-            Set t = new Set();
-            intArray = intArray(tokens[1]);
-            s.add(intArray);
-            intArray = intArray(tokens[2]);
-            t.add(intArray);
-            System.out.println(s.intersection(t));
-            break;
-            case "retainAll":
-            s = new Set();
-            intArray = intArray(tokens[1]);
-            s.add(intArray);
-            intArray = intArray(tokens[2]);
-            System.out.println(s.retainAll(intArray));
-            break;
+                s = new Set();
+                Set t = new Set();
+                intArray = intArray(tokens[1]);
+                s.add(intArray);
+                intArray = intArray(tokens[2]);
+                t.add(intArray);
+                System.out.println(s.intersection(t));
+                break;
+            case "retainAll":;
+                s = new Set();
+                intArray = intArray(tokens[1]);
+                s.add(intArray);
+                System.out.println(s);
+                intArray = intArray(tokens[2]);
+                System.out.println(s.retainAll(intArray));
+                break;
             case "cartesianProduct":
-            s = new Set();
-            t = new Set();
-            intArray = intArray(tokens[1]);
-            s.add(intArray);
-            intArray = intArray(tokens[2]);
-            t.add(intArray);
-            System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
-            break;
+                s = new Set();
+                t = new Set();
+                intArray = intArray(tokens[1]);
+                s.add(intArray);
+                intArray = intArray(tokens[2]);
+                t.add(intArray);
+                System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
+                break;
             default:
                 break;
             }
         }
     }
 }
-
-
