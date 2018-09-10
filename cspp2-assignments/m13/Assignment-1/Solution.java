@@ -223,7 +223,6 @@ public final class Solution {
             // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
             case "size":
-                System.out.println(tokens[0]);
                 System.out.println(s.size());
                 break;
             case "contains":
