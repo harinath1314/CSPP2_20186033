@@ -51,8 +51,11 @@ public class Solution {
         Scanner input = new Scanner(System.in);
         int inp = input.nextInt();
         input.nextLine();
-        while (stdin.hasNext()) {
-            // read the line
+        for (int i = 0; i < inp; i++) {
+        	
+        // }
+        // while (stdin.hasNext()) {
+        //     // read the line
             String line = stdin.nextLine();
             // split the line using space
             String[] tokens = line.split(" ");
