@@ -121,7 +121,7 @@ class Set {
     public Set intersection(Set giset) {
         Set newset = new Set();
         for (int i = 0; i < this.size(); i++) {
-            if(giset.contains(this.get(i))) {
+            if (giset.contains(this.get(i))) {
                 newset.add(this.get(i));
 
             }
@@ -182,7 +182,7 @@ public final class Solution {
      */
     private Solution() {
 
-    
+
     }
     /**
      * helper function to convert string input to int array.
