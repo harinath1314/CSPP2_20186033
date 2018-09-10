@@ -50,7 +50,7 @@ public class Solution {
         // check if there is one more line to process
         Scanner input = new Scanner(System.in);
         int inp = input.nextInt();
-        input.nextLine();
+        // input.nextLine();
         for (int i = 0; i < inp; i++) {
         	
         // }
