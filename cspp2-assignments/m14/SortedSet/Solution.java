@@ -429,11 +429,11 @@ public final class Solution {
             // split the line using space
             String[] tokens = line.split(" ");
             switch (tokens[0]) {
-            
+
             case "print":
                 System.out.println(s);
                 break;
-            
+
             case "addAll":
                 String[] strArray = tokens[1].split(",");
                 int[] intArray1 = new int[strArray.length];
