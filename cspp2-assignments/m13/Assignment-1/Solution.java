@@ -16,7 +16,6 @@ class Set {
     /**.
      * { var_description }
      */
-    private int[] newset;
     /**.
      * { var_description }
      */
@@ -28,7 +27,6 @@ class Set {
         final int fifty = 50;
         hari = new int[fifty];
         size = 0;
-        newset = new int[fifty];
     }
     /**
     * returns a sixe of set.
@@ -104,61 +102,70 @@ class Set {
         }
 
     }
-    // }
-    // /**
-    //  * intersection of set.
-    //  *
-    //  * @param      giset  The giset
-    //  *
-    //  * @return     { description_of_the_return_value }
-    //  */
-    // public int[] intersection(int[] giset) {
-    //     for (int i = 0; i < giset.length; i++) {
-    //         if(contains(giset[i])) {
 
-    //         }
-    //     }
-    //     return newset;
+    public int get(final int index) {
+        if (index < 0 || index >= this.size()) {
+            return -1;
+        } else {
+            return hari[index];
+        }
+    }
 
+    /**
+     * intersection of set.
+     *
+     * @param      giset  The giset
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public Set intersection(Set giset) {
+        Set newset = new Set();
+        for (int i = 0; i < this.size(); i++) {
+            if(giset.contains(this.get(i))) {
+                newset.add(this.get(i));
 
-
-    // }
-    // /**
-    //  * retain function for retaining all elements of given array
-    //  *
-    //  * @param      array  The array
-    //  *
-    //  * @return     returns a set.
-    //  */
-    // public int[] retainAll(int[] array) {
-    //     return hari;
-
-    // }
-    // /**
-    //  * to find the cartesian product of a given set.
-    //  *
-    //  * @param      giveset  The giveset
-    //  *
-    //  * @return     { description_of_the_return_value }
-    //  */
-    // public int[][] cartesianProduct(int [] that) {
-    //     int[][] a = new int[25][25];
-    //     final int i = this.size();
-    //     final int j = that.length;
-    //     for (int k = 0; k < i; k++) {
-    //         for (int l = 0; l < j; l++) {
-    //             int helper = 0;
-    //             a[k][0] = helper++;
-    //             a[k][1] = that[j];
-    //         }
-
-    //     }
-
-    //     return a;
+            }
+        }
+        return newset;
+    }
 
 
 
-    //  }
+    /**
+     * retain function for retaining all elements of given array
+     *
+     * @param      array  The array
+     *
+     * @return     returns a set.
+     */
+    public Set retainAll(final int[] arr) {
+        Set other = new Set();
+        for (int item : arr) {
+            other.add(item);
+        }
+        return intersection(other);
+    }
+
+    /**
+     * to find the cartesian product of a given set.
+     *
+     * @param      giveset  The giveset
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public int[][] cartesianProduct(final Set other) {
+        int [][] result = new int[this.size() * other.size()][2];
+        int k = -1;
+        if (this.size() == 0 || other.size() == 0) {
+            return null;
+        }
+        for (int i = 0; i < this.size(); i++) {
+            for (int j = 0; j < other.size(); j++) {
+                result[++k][0] = this.get(i);
+                result[k][1] = other.get(j);
+            }
+        }
+        return result;
 }
 
 
@@ -167,6 +174,7 @@ class Set {
 /**
  * Solution class for code-eval.
  */
+
 public final class Solution {
     /**
      * Constructs the object.
@@ -174,6 +182,7 @@ public final class Solution {
     private Solution() {
 
     }
+}
     /**
      * helper function to convert string input to int array.
      *
@@ -228,35 +237,36 @@ public final class Solution {
                     s.add(intArray);
                 }
                 break;
-            // case "intersection":
-            // s = new Set();
-            // Set t = new Set();
-            // intArray = intArray(tokens[1]);
-            // s.add(intArray);
-            // intArray = intArray(tokens[2]);
-            // t.add(intArray);
-            // System.out.println(s.intersection(t));
-            // break;
-            // case "retainAll":
-            // s = new Set();
-            // intArray = intArray(tokens[1]);
-            // s.add(intArray);
-            // intArray = intArray(tokens[2]);
-            // System.out.println(s.retainAll(intArray));
-            // break;
-            // case "cartesianProduct":
-            // s = new Set();
-            // t = new Set();
-            // intArray = intArray(tokens[1]);
-            // s.add(intArray);
-            // intArray = intArray(tokens[2]);
-            // t.add(intArray);
-            // System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
-            // break;
+            case "intersection":
+            s = new Set();
+            Set t = new Set();
+            intArray = intArray(tokens[1]);
+            s.add(intArray);
+            intArray = intArray(tokens[2]);
+            t.add(intArray);
+            System.out.println(s.intersection(t));
+            break;
+            case "retainAll":
+            s = new Set();
+            intArray = intArray(tokens[1]);
+            s.add(intArray);
+            intArray = intArray(tokens[2]);
+            System.out.println(s.retainAll(intArray));
+            break;
+            case "cartesianProduct":
+            s = new Set();
+            t = new Set();
+            intArray = intArray(tokens[1]);
+            s.add(intArray);
+            intArray = intArray(tokens[2]);
+            t.add(intArray);
+            System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
+            break;
             default:
                 break;
             }
         }
     }
 }
+
 
