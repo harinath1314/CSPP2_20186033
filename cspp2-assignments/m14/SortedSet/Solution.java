@@ -50,6 +50,7 @@ public class Solution {
         // check if there is one more line to process
         Scanner input = new Scanner(System.in);
         int inp = input.nextInt();
+        input.nextLine();
         while (stdin.hasNext()) {
             // read the line
             String line = stdin.nextLine();
