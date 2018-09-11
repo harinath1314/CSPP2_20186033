@@ -463,22 +463,22 @@ public final class Solution {
                 break;
             case "headSet":
                 int[] temp2 = s.headSet(Integer.parseInt(tokens[1]));
-
+                
                 try {
                     String str1 = "{";
                     int in;
                     if (temp2.length == 0) {
                         throw new Exception();
-                    } else {
-                        for (in = 0; in < temp2.length - 1; in++) {
-                            str1 += temp2[in] + ", ";
-                        }
-                        str1 += temp2[temp2.length - 1] + "}";
-                        System.out.println(str1);
-                        break;
+                    }else{
+                    for (in = 0; in < temp2.length - 1; in++) {
+                        str1 += temp2[in] + ", ";
                     }
-                } catch (Exception h) {
-                    System.out.println("Set​ ​Empty​ ​Exception");
+                    str1 += temp2[temp2.length - 1] + "}";
+                    System.out.println(str1);
+                    break;
+                    }
+                }catch (Exception h) {
+                    System.out.println("Set​ Empty​ Exception");
                 }
                 break;
             case "last":
@@ -492,7 +492,7 @@ public final class Solution {
                         break;
                     }
                 } catch (Exception h) {
-                    System.out.println("Set​ ​Empty​ ​Exception");
+                    System.out.println("Set​ Empty​ Exception");
                 }
                 break;
 
