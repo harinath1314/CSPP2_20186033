@@ -78,7 +78,7 @@ class List {
                 throw new Exception();
             }
         } catch (Exception h) {
-            System.out.println("Index Position Exception");
+            System.out.println("Invalid Position Exception");
         }
     }
 
