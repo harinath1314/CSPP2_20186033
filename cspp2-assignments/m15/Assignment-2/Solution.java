@@ -479,6 +479,7 @@ public final class Solution {
                 }catch (Exception h) {
                     System.out.println("Set​ ​Empty​ ​Exception");
                 }
+                break;
             case "last":
                 try {
                     if (s.size() == 0) {
@@ -493,6 +494,7 @@ public final class Solution {
                 } catch (Exception h) {
                     System.out.println("Set​ ​Empty​ ​Exception");
                 }
+                break;
 
             default:
                 break;
