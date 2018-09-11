@@ -251,14 +251,14 @@ class List {
         }
     }
     public int count(int a) {
-        int count = 0;
-        for (int i = 0; i < list.length; i++) {
+        int counter = 0;
+        for (int i = 0; i < size; i++) {
             if (list[i] == a) {
-                count++;
+                counter++;
             }
 
         }
-        return count;
+        return counter;
     }
 }
 public class Solution {
