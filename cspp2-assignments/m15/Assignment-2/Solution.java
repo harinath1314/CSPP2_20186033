@@ -441,7 +441,7 @@ public final class Solution {
             case "subSet":
                 String[] temp = tokens[1].split(",");
                 try {
-                    if (Integer.parseInt(temp[0]) < Integer.parseInt(temp[1])) {
+                    if (Integer.parseInt(temp[0]) <= Integer.parseInt(temp[1])) {
                         int[] temp1 = s.subSet(Integer.parseInt(temp[0]),
                                                Integer.parseInt(temp[1]));
                         String str = "{";
@@ -497,6 +497,7 @@ public final class Solution {
                     System.out.println("Set Empty Exception");
                 }
                 break;
+
 
             default:
                 break;
