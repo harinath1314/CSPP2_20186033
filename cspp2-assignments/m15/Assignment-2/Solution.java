@@ -464,25 +464,32 @@ public final class Solution {
             case "headSet":
                 int[] temp2 = s.headSet(Integer.parseInt(tokens[1]));
                 String str1 = "{";
-                int in;
-                if (temp2.length == 0) {
-                    System.out.println("{}");
+                try {
+                    int in;
+                    if (temp2.length == 0) {
+                        throw new Exception();
+                    }else{
+                    for (in = 0; in < temp2.length - 1; in++) {
+                        str1 += temp2[in] + ", ";
+                    }
+                    str1 += temp2[temp2.length - 1] + "}";
+                    System.out.println(str1);
                     break;
+                    }
+                }catch (Exception h) {
+                    System.out.println("Set​ ​Empty​ ​Exception");
                 }
-                for (in = 0; in < temp2.length - 1; in++) {
-                    str1 += temp2[in] + ", ";
-                }
-                str1 += temp2[temp2.length - 1] + "}";
-                System.out.println(str1);
-                break;
             case "last":
                 try {
-                    if (s.size() == 0) {throw new Exception();
+                    if (s.size() == 0) {
+                        System.out.println(s.size());
+                        throw new Exception();
                     }
 
                     else {
                         System.out.println(s.last());
-                        break;}
+                        break;
+                    }
                 } catch (Exception h) {
                     System.out.println("Set​ ​Empty​ ​Exception");
                 }
