@@ -463,21 +463,21 @@ public final class Solution {
                 break;
             case "headSet":
                 int[] temp2 = s.headSet(Integer.parseInt(tokens[1]));
-                
+
                 try {
                     String str1 = "{";
                     int in;
                     if (temp2.length == 0) {
                         throw new Exception();
-                    }else{
-                    for (in = 0; in < temp2.length - 1; in++) {
-                        str1 += temp2[in] + ", ";
+                    } else {
+                        for (in = 0; in < temp2.length - 1; in++) {
+                            str1 += temp2[in] + ", ";
+                        }
+                        str1 += temp2[temp2.length - 1] + "}";
+                        System.out.println(str1);
+                        break;
                     }
-                    str1 += temp2[temp2.length - 1] + "}";
-                    System.out.println(str1);
-                    break;
-                    }
-                }catch (Exception h) {
+                } catch (Exception h) {
                     System.out.println("Set​ ​Empty​ ​Exception");
                 }
                 break;
