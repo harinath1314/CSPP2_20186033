@@ -2,9 +2,9 @@ import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
 /**
- * Class for set.
+ * Class for SortedSetADT.
  * @author : harinatha reddy
- * date 
+ * date
  */
 class SortedSetADT {
     /**
