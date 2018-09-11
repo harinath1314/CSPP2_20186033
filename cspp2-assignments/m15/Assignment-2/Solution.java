@@ -477,14 +477,14 @@ public final class Solution {
                 break;
             case "last":
                 try {
-                    if (s.size() != 0) {
-                        System.out.println(s.last());
-                        break;
+                    if (s.size() == 0) {throw new Exception();
                     }
 
-                    else { throw new Exception();}
+                    else {
+                        System.out.println(s.last());
+                        break;}
                 } catch (Exception h) {
-                    System.out.println("Set​ ​ Empty​ ​ Exception");
+                    System.out.println("Set​ ​Empty​ ​Exception");
                 }
 
             default:
