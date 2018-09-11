@@ -22,7 +22,7 @@ class List {
     /**
      * Constructs the object.
      */
-    public List() {
+    List() {
 
 
         final int ten = 10;
@@ -189,7 +189,7 @@ class List {
      */
     public void removeAll(final int[] newArray) {
         // write the logic
-        for (int each  : newArray   ) {
+        for (int each  : newArray) {
             for (int i = 0; i < newArray.length; i++) {
                 if (contains(newArray[i])) {
                     remove(indexOf(newArray[i]));
@@ -250,7 +250,14 @@ class List {
             remove(0);
         }
     }
-    public int count(int a) {
+    /**.
+     * gives the count of repetition of given int a.
+     *
+     * @param      a     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public int count(final int a) {
         int counter = 0;
         for (int i = 0; i < size; i++) {
             if (list[i] == a) {
@@ -261,7 +268,18 @@ class List {
         return counter;
     }
 }
+/**.
+ * Class for solution.
+ */
 public class Solution {
+    /**.
+     * Constructs the object.
+     */
+    private Solution () {
+        /**
+         * { item_description }
+         */
+    }
     /**.
      * main function starts here.
      *
@@ -293,6 +311,7 @@ public class Solution {
                 if (tokens.length == 2) {
                     System.out.println(l.count(Integer.parseInt(tokens[1])));
                 }
+                break;
             case "size":
                 System.out.println(l.size());
                 break;
