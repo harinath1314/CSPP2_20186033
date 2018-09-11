@@ -478,7 +478,8 @@ public final class Solution {
                     break;
                     }
                 }catch (Exception h) {
-                    System.out.println("Set​ Empty​ Exception");
+
+                    System.out.println("Set Empty Exception");
                 }
                 break;
             case "last":
@@ -492,7 +493,8 @@ public final class Solution {
                         break;
                     }
                 } catch (Exception h) {
-                    System.out.println("Set​ Empty​ Exception");
+                    
+                    System.out.println("Set Empty Exception");
                 }
                 break;
 
