@@ -216,7 +216,7 @@ class SortedSet extends Set {
     /**.
      * { var_description }
      */
-    private int size;
+    int size;
     /**.
      * Constructs the object.
      */
@@ -463,8 +463,9 @@ public final class Solution {
                 break;
             case "headSet":
                 int[] temp2 = s.headSet(Integer.parseInt(tokens[1]));
-                String str1 = "{";
+                
                 try {
+                    String str1 = "{";
                     int in;
                     if (temp2.length == 0) {
                         throw new Exception();
@@ -482,7 +483,7 @@ public final class Solution {
                 break;
             case "last":
                 try {
-                    if (s.size() == 0) {
+                    if (s.size == 0) {
                         throw new Exception();
                     }
 
