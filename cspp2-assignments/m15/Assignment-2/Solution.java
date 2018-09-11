@@ -483,7 +483,6 @@ public final class Solution {
             case "last":
                 try {
                     if (s.size() == 0) {
-                        System.out.println(s.size());
                         throw new Exception();
                     }
 
