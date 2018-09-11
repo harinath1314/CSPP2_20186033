@@ -250,6 +250,16 @@ class List {
             remove(0);
         }
     }
+    public int count(int a) {
+        int count = 0;
+        for (int i = 0; i < list.length; i++) {
+            if (list[i] == a) {
+                count++;
+            }
+
+        }
+        return count;
+    }
 }
 public class Solution {
     /**.
@@ -279,6 +289,10 @@ public class Solution {
                     }
                 }
                 break;
+            case "count":
+                if (tokens.length == 2) {
+                    System.out.println(l.count(Integer.parseInt(tokens[1])));
+                }
             case "size":
                 System.out.println(l.size());
                 break;
@@ -342,7 +356,7 @@ public class Solution {
                         throw new Exception();
                     }
                 } catch (Exception h) {
-                    System.out.println("Index Out Of Bounds Exception");
+                    System.out.println("Index Out of Bounds Exception");
                 }
 
                 break;
