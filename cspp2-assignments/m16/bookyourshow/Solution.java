@@ -74,15 +74,15 @@ public final class Solution {
  * Class for show.
  */
 class Show {
-    /**
+    /**.
      * { var_description }
      */
     private String movie;
-    /**
+    /**.
      * { var_description }
      */
     private String showTime;
-    /**
+    /**.
      * { var_description }
      */
     private String[] seats;
@@ -93,10 +93,10 @@ class Show {
      * @param      showTime  The show time
      * @param      seats     The seats
      */
-    Show (String movie, String showTime, String[] seats) {
-        this.movie = movie;
-        this.showTime = showTime;
-        this.seats = seats;
+    Show(final String movie1, final String showTime1, final String[] seats1) {
+        this.movie = movie1;
+        this.showTime = showTime1;
+        this.seats = seats1;
     }
     /**
      * Gets the movie.
@@ -128,7 +128,7 @@ class Show {
      *
      * @param      position  The position
      */
-    void setSeatNA(int position) {
+    void setSeatNA(final int position) {
         seats[position] = "N/A";
     }
     /**
@@ -144,7 +144,13 @@ class Show {
  * Class for patron.
  */
 class Patron {
+    /**.
+     * { var_description }
+     */
     private String name;
+    /**.
+     * { var_description }.
+     */
     private String mobile;
     /**
      * Constructs the object.
@@ -152,9 +158,9 @@ class Patron {
      * @param      name    The name
      * @param      mobile  The mobile
      */
-    Patron (String name, String mobile) {
-        this.name = name;
-        this.mobile = mobile;
+    Patron(final String name1, final String mobile1) {
+        this.name = name1;
+        this.mobile = mobile1;
     }
 
     /**
@@ -193,15 +199,15 @@ class Patron {
  * Class for book your show.
  */
 class BookYourShow {
-    /**
+    /**.
      * { var_description }
      */
-    ArrayList<Show> showList;
-    /**
+    private ArrayList<Show> showList;
+    /**.
      * { var_description }
      */
-    ArrayList<String> ticlist;
-    /**
+    private ArrayList<String> ticlist;
+    /**.
      * Constructs the object.
      */
     BookYourShow() {
@@ -214,7 +220,7 @@ class BookYourShow {
      *
      * @param      show  The show
      */
-    void addAShow(Show show) {
+    void addAShow(final Show show) {
         showList.add(show);
     }
     /**
@@ -227,9 +233,10 @@ class BookYourShow {
      */
     Show getAShow(final String movie, final String showTime) {
         for (Show show : showList) {
-            if (show.getMovie().equals(movie) &&
-                show.getShowTime().equals(showTime))
+            if (show.getMovie().equals(movie)
+                && show.getShowTime().equals(showTime)) {
                 return show;
+        }
         }
         return null;
     }
@@ -242,7 +249,7 @@ class BookYourShow {
      * @param      seats     The seats
      */
     void bookAShow(final String movie, final
-        String showTime, Patron patron, final String[] seats) {
+        String showTime, final Patron patron, final String[] seats) {
         Show show = getAShow(movie, showTime);
         if (show == null) {
             System.out.println("No show");
@@ -250,12 +257,14 @@ class BookYourShow {
         }
         boolean flag = false;
         String[] seatsAvailable = show.getSeats();
-        for (String seat : seats)
-            for (int i = 0; i < seatsAvailable.length; i++)
+        for (String seat : seats) {
+            for (int i = 0; i < seatsAvailable.length; i++) {
                 if (seat.equals(seatsAvailable[i])) {
                     show.setSeatNA(i);
                     flag = true;
                 }
+            }
+        }
 
 
         if (flag) {
