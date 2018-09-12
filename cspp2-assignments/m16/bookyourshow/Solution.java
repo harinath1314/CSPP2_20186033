@@ -74,8 +74,17 @@ public final class Solution {
  * Class for show.
  */
 class Show {
+    /**
+     * { var_description }
+     */
     private String movie;
+    /**
+     * { var_description }
+     */
     private String showTime;
+    /**
+     * { var_description }
+     */
     private String[] seats;
     /**
      * constructs the objects.
@@ -171,7 +180,7 @@ class Patron {
     /**
     /**
     */
-    /**
+    /**.
      * Returns a string representation of the object.
      *
      * @return     String representation of the object.
@@ -184,7 +193,13 @@ class Patron {
  * Class for book your show.
  */
 class BookYourShow {
+    /**
+     * { var_description }
+     */
     ArrayList<Show> showList;
+    /**
+     * { var_description }
+     */
     ArrayList<String> ticlist;
     /**
      * Constructs the object.
@@ -210,13 +225,15 @@ class BookYourShow {
      *
      * @return     A show.
      */
-    Show getAShow(String movie, String showTime) {
-        for (Show show : showList)
-            if (show.getMovie().equals(movie) && show.getShowTime().equals(showTime))
+    Show getAShow(final String movie, final String showTime) {
+        for (Show show : showList) {
+            if (show.getMovie().equals(movie) &&
+                show.getShowTime().equals(showTime))
                 return show;
+        }
         return null;
     }
-    /**
+    /**.
      * { function_description }
      *
      * @param      movie     The movie
@@ -224,7 +241,8 @@ class BookYourShow {
      * @param      patron    The patron
      * @param      seats     The seats
      */
-    void bookAShow(String movie, String showTime, Patron patron, String[] seats) {
+    void bookAShow(final String movie, final
+        String showTime, Patron patron, final String[] seats) {
         Show show = getAShow(movie, showTime);
         if (show == null) {
             System.out.println("No show");
@@ -251,18 +269,23 @@ class BookYourShow {
      * @param      showTime  The show time
      * @param      mobile    The mobile
      */
-    void printTicket(String movie, String showTime, String mobile) {
+    void printTicket(final String movie,
+        final String showTime, final String mobile) {
         String t = mobile + " " + movie + " " + showTime;
-        if (ticlist.contains(t))
+        if (ticlist.contains(t)) {
             System.out.println(t);
-        else
+        }
+        else {
             System.out.println("Invalid");
+        }
     }
     /**
      * Shows all.
      */
     void showAll() {
-        for (Show show : showList)
-            System.out.println(show.toString() + "," + Arrays.toString(show.getSeats()).replace(" ", ""));
+        for (Show show : showList) {
+            System.out.println(show.toString() + ","
+                + Arrays.toString(show.getSeats()).replace(" ", ""));
+        }
     }
 }
