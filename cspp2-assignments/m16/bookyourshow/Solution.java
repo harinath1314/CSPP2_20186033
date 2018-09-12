@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 /**
  * Class for solution.
- * Author harinath reddy 
+ * Author harinath reddy
  * date : 12/09/18
  */
 public final class Solution {
@@ -25,7 +25,7 @@ public final class Solution {
         int testCases = Integer.parseInt(scan.nextLine());
         for (int i = 0; i < testCases; i++) {
             String[] tokens = scan.nextLine().
-                replace("[", "").replace("]", "").split(",");
+                              replace("[", "").replace("]", "").split(",");
             String[] check = tokens[0].split(" ");
             switch (check[0]) {
             case "add":
