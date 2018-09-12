@@ -89,9 +89,9 @@ class Show {
     /**
      * constructs the objects.
      *
-     * @param      movie     The movie
-     * @param      showTime  The show time
-     * @param      seats     The seats
+     * @param      movie1    The movie
+     * @param      showTime1  The show time
+     * @param      seats1     The seats
      */
     Show(final String movie1, final String showTime1, final String[] seats1) {
         this.movie = movie1;
@@ -155,8 +155,8 @@ class Patron {
     /**
      * Constructs the object.
      *
-     * @param      name    The name
-     * @param      mobile  The mobile
+     * @param      name1    The name
+     * @param      mobile1  The mobile
      */
     Patron(final String name1, final String mobile1) {
         this.name = name1;
@@ -271,8 +271,9 @@ class BookYourShow {
             ticlist.add(patron.getMobile() + " " + movie + " " + showTime);
         }
     }
-    /**
-     * { function_description }
+    /**.
+     *prints one funation.
+     * prints a funtion.
      *
      * @param      movie     The movie
      * @param      showTime  The show time
@@ -283,8 +284,7 @@ class BookYourShow {
         String t = mobile + " " + movie + " " + showTime;
         if (ticlist.contains(t)) {
             System.out.println(t);
-        }
-        else {
+        } else {
             System.out.println("Invalid");
         }
     }
