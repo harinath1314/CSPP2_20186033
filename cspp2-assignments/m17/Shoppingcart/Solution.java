@@ -1,7 +1,7 @@
 import java.util.Scanner;
 /**
  * Class for solution.
- * author : harinatha reddy 
+ * author : harinatha reddy
  * date : 14/09/18
  */
 final class Solution {
@@ -26,7 +26,7 @@ final class Solution {
             case "Item":
                 String[] tokens = input[1].split(",");
                 shop.addToCatalog(new Item(tokens[0],
-                    tokens[1], tokens[2]));
+                                           tokens[1], tokens[2]));
                 break;
             case "catalog":
                 shop.showCatalog();
@@ -40,11 +40,11 @@ final class Solution {
                 break;
             case "totalAmount":
                 System.out.println("totalAmount: "
-                    + shop.getTotalAmount());
+                                   + shop.getTotalAmount());
                 break;
             case "payableAmount":
                 System.out.println("Payable amount: "
-                    + shop.getPayableAmount());
+                                   + shop.getPayableAmount());
                 break;
             case "remove":
                 String[] tokens2 = input[1].split(",");
@@ -66,21 +66,30 @@ final class Solution {
  * Class for item.
  */
 class Item {
+    /**
+     * { var_description }.
+     */
     String vastu;
+    /**
+     * { var_description }.
+     */
     int quantity;
+    /**
+     * { var_description }.
+     */
     double fees;
     /**
      * Constructs the object.
      *
      * @param      vast     The vastu
-     * @param      quantity  The quantity
-     * @param      fees      The fees
+     * @param      quantit  The quantity
+     * @param      fee      The fees
      */
-    public Item(final String vast, final String quantity,
-        final String fees) {
+    Item(final String vast, final String quantit,
+                final String fee) {
         this.vastu = vast;
-        this.quantity = Integer.parseInt(quantity);
-        this.fees = Double.parseDouble(fees);
+        this.quantity = Integer.parseInt(quantit);
+        this.fees = Double.parseDouble(fee);
     }
     /**
      * Constructs the object.
@@ -88,7 +97,7 @@ class Item {
      * @param      vastu     The vastu
      * @param      quantity  The quantity
      */
-    public Item(final String vastu, final String quantity) {
+    Item(final String vastu, final String quantity) {
         this.vastu = vastu;
         this.quantity = Integer.parseInt(quantity);
     }
@@ -118,13 +127,34 @@ class Item {
  * Class for shopping cartesian.
  */
 class ShoppingCart {
-    public int catsize, cartsize;
-    int k = 1;
-
-    Item[] catalog, cart;
-    String[] validCoupons = {"IND10", "IND20", "IND30", "IND50"};
-    static double discount = 0.0;
-    static boolean couponApplied = false;
+    /**.
+     * { var_description }.
+     */
+    public int catsize;
+    /**.
+     * { var_description }.
+     */
+    public int cartsize;
+    /**
+     * { var_description }.
+     */
+    public int k = 1;
+    /**
+     * { item_description }.
+     */
+    public Item[] catalog, cart;
+    /**
+     * { var_description }.
+     */
+    public String[] validCoupons = {"IND10", "IND20", "IND30", "IND50"};
+    /**.
+     * { var_description }.
+     */
+    public static double discount = 0.0;
+    /**.
+     * { var_description }.
+     */
+    public static boolean couponApplied = false;
     /**
      * Constructs the object.
      */
@@ -156,15 +186,15 @@ class ShoppingCart {
             }
         }
     }
-    
-    /**
+
+    /**.
      * { function_description }
      *
      * @param      item  The item
      *
      * @return     { description_of_the_return_value }
      */
-    boolean inCart (final Item item) {
+    boolean inCart(final Item item) {
         for (Item s : cart) {
             if (s != null) {
                 if (s.equals(item)) {
@@ -175,7 +205,7 @@ class ShoppingCart {
         }
         return false;
     }
-    /**
+    /**.
      * { function_description }
      *
      * @param      item  The item
@@ -312,7 +342,7 @@ class ShoppingCart {
             if (i != null) {
                 if (i.quantity != 0) {
                     System.out.println(i.vastu
-                        + " " + i.quantity + " " + getPrice(i));
+                                       + " " + i.quantity + " " + getPrice(i));
                 }
             }
         }
