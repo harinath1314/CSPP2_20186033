@@ -94,8 +94,8 @@ class Item {
     /**
      * Constructs the object.
      *
-     * @param      vastu     The vastu
-     * @param      quantity  The quantity
+     * @param      vast     The vastu
+     * @param      quantit  The quantity
      */
     Item(final String vast, final String quantit) {
         this.vastu = vast;
