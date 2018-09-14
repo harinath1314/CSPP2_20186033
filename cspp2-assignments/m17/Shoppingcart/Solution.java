@@ -1,6 +1,4 @@
 import java.util.Scanner;
-import java.util.Arrays;
-import java.util.ArrayList;
 /**
  * Class for solution.
  * author : harinatha reddy 
@@ -27,7 +25,8 @@ final class Solution {
             switch (input[0]) {
             case "Item":
                 String[] tokens = input[1].split(",");
-                shop.addToCatalog(new Item(tokens[0], tokens[1], tokens[2]));
+                shop.addToCatalog(new Item(tokens[0],
+                    tokens[1], tokens[2]));
                 break;
             case "catalog":
                 shop.showCatalog();
@@ -40,10 +39,12 @@ final class Solution {
                 shop.showCart();
                 break;
             case "totalAmount":
-                System.out.println("totalAmount: " + shop.getTotalAmount());
+                System.out.println("totalAmount: "
+                    + shop.getTotalAmount());
                 break;
             case "payableAmount":
-                System.out.println("Payable amount: " + shop.getPayableAmount());
+                System.out.println("Payable amount: "
+                    + shop.getPayableAmount());
                 break;
             case "remove":
                 String[] tokens2 = input[1].split(",");
@@ -68,18 +69,44 @@ class Item {
     String vastu;
     int quantity;
     double fees;
-    public Item(final String vastu, final String quantity, final String fees) {
-        this.vastu = vastu;
+    /**
+     * Constructs the object.
+     *
+     * @param      vast     The vastu
+     * @param      quantity  The quantity
+     * @param      fees      The fees
+     */
+    public Item(final String vast, final String quantity,
+        final String fees) {
+        this.vastu = vast;
         this.quantity = Integer.parseInt(quantity);
         this.fees = Double.parseDouble(fees);
     }
+    /**
+     * Constructs the object.
+     *
+     * @param      vastu     The vastu
+     * @param      quantity  The quantity
+     */
     public Item(final String vastu, final String quantity) {
         this.vastu = vastu;
         this.quantity = Integer.parseInt(quantity);
     }
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         return this.vastu + " " + this.quantity + " " + this.fees;
     }
+    /**
+     * { function_description }
+     *
+     * @param      other  The other
+     *
+     * @return     { description_of_the_return_value }
+     */
     public boolean equals(final Item other) {
         if (!this.vastu.equals(other.vastu)) {
             return false;
@@ -91,7 +118,7 @@ class Item {
  * Class for shopping cartesian.
  */
 class ShoppingCart {
-    int catsize, cartsize;
+    public int catsize, cartsize;
     int k = 1;
 
     Item[] catalog, cart;
@@ -102,8 +129,9 @@ class ShoppingCart {
      * Constructs the object.
      */
     ShoppingCart() {
-        catalog = new Item[20];
-        cart = new Item[20];
+        final int twenty = 20;
+        catalog = new Item[twenty];
+        cart = new Item[twenty];
         catsize = 0;
         cartsize = 0;
 
@@ -237,8 +265,10 @@ class ShoppingCart {
      */
     public double getPayableAmount() {
         double total = getTotalAmount();
+        final int fifteen = 15;
+        final int hundred = 100;
         double newTotal = total - discount;
-        double tax = newTotal * 15 / 100;
+        double tax = newTotal * fifteen / hundred;
         return newTotal + tax;
     }
 
@@ -255,11 +285,13 @@ class ShoppingCart {
             return;
         }
         boolean valid = false;
+        final int hundred = 100;
+        final int three = 3;
         if (k == 1) {
             for (String s : validCoupons) {
                 if (s.equals(coupon)) {
-                    int num = Integer.parseInt(coupon.substring(3));
-                    discount = getTotalAmount() * num / 100;
+                    int num = Integer.parseInt(coupon.substring(three));
+                    discount = getTotalAmount() * num / hundred;
                     valid = true;
                     couponApplied = true;
                     k++;
@@ -279,7 +311,8 @@ class ShoppingCart {
         for (Item i : cart) {
             if (i != null) {
                 if (i.quantity != 0) {
-                    System.out.println(i.vastu + " " + i.quantity + " " + getPrice(i));
+                    System.out.println(i.vastu
+                        + " " + i.quantity + " " + getPrice(i));
                 }
             }
         }
@@ -287,7 +320,9 @@ class ShoppingCart {
 
         double total = getTotalAmount();
         double total2 = total - discount;
-        double tax = total2 * 15 / 100;
+        final int fifteen = 15;
+        final int hundred = 100;
+        double tax = total2 * fifteen / hundred;
         System.out.println("Total:" + getTotalAmount());
         System.out.println("Disc%:" + discount);
         System.out.println("Tax:" + tax);
