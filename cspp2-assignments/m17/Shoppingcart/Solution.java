@@ -86,7 +86,7 @@ class Item {
      * @param      fee      The fees
      */
     Item(final String vast, final String quantit,
-                final String fee) {
+         final String fee) {
         this.vastu = vast;
         this.quantity = Integer.parseInt(quantit);
         this.fees = Double.parseDouble(fee);
@@ -97,9 +97,9 @@ class Item {
      * @param      vastu     The vastu
      * @param      quantity  The quantity
      */
-    Item(final String vastu, final String quantity) {
-        this.vastu = vastu;
-        this.quantity = Integer.parseInt(quantity);
+    Item(final String vast, final String quantit) {
+        this.vastu = vast;
+        this.quantity = Integer.parseInt(quantit);
     }
     /**
      * Returns a string representation of the object.
@@ -109,7 +109,7 @@ class Item {
     public String toString() {
         return this.vastu + " " + this.quantity + " " + this.fees;
     }
-    /**
+    /**.
      * { function_description }
      *
      * @param      other  The other
