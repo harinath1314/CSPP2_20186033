@@ -69,15 +69,15 @@ class Item {
     /**
      * { var_description }.
      */
-    String vastu;
+    public String vastu;
     /**
      * { var_description }.
      */
-    int quantity;
+    public int quantity;
     /**
      * { var_description }.
      */
-    double fees;
+    public double fees;
     /**
      * Constructs the object.
      *
