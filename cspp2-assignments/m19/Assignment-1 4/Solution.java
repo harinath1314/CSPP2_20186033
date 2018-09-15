@@ -100,7 +100,7 @@ public final class Solution {
             for (String ele : choicesare) {
                 System.out.print(ele + "    ");
             }
-            String chosen = s.nextLine();
+            String chosen = s.next();
             quiz.addchosenans(i, chosen);
             k++;
 
