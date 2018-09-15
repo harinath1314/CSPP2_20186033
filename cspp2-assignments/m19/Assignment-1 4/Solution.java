@@ -141,11 +141,11 @@ class Quiz {
     public String[] penalty;
     public String[] chosenans;
     Quiz() {
-        questions = new String[5];
-        choices = new String[5];
-        rightans = new String[5];
-        maxmarks = new String[5];
-        penalty = new String[5];
+        questions = new String[50];
+        choices = new String[50];
+        rightans = new String[50];
+        maxmarks = new String[50];
+        penalty = new String[50];
 
     }
     public void addQuestion(int size, String quest) {
