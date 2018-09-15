@@ -125,7 +125,7 @@ public final class Solution {
             System.out.println(refer);
             System.out.println(reference[1]);
             System.out.println(quiz.getrightans(i));
-            if (reference[1].equals(quiz.getrightans(i))) {
+            if (reference[1].equals(Integer.parseInt(quiz.getrightans(i)))) {
                 System.out.println("Correct Answer! - Marks Awarded: " + quiz.getmaxmarks(i));
                 totalScore = totalScore+Integer.parseInt(quiz.getmaxmarks(i));
             } else {
