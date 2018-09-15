@@ -101,7 +101,7 @@ public final class Solution {
                 System.out.print(ele + "    ");
             }
             String chosen = s.nextLine();
-            quiz.addchosenans(i, (chosen));
+            quiz.addchosenans(i, chosen);
             k++;
 
 
