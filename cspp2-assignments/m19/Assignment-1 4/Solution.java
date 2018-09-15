@@ -135,7 +135,7 @@ public final class Solution {
             // System.out.println(Arrays.toString(quiz.maxmarks));
             // System.out.println(Arrays.toString(quiz.penalty));
             // System.out.println(Arrays.toString(quiz.chosenans));
-            if (reference[1] == quiz.getrightans(i)) {
+            if (reference[1].equals(quiz.getrightans(i))){
                 System.out.println(" Correct Answer! - Marks Awarded: " + quiz.getmaxmarks(i));
                 totalScore = totalScore+Integer.parseInt(quiz.getmaxmarks(i));
             } else {
