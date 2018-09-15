@@ -194,6 +194,7 @@ class Quiz {
 
     public void addchosenans(int size, String chosen) {
         chosenans[size] = chosen;
+        System.out.println(Arrays.toString(chosenans));
     }
     public String getchosen(int index) {
         return chosenans[index];
