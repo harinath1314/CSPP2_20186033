@@ -119,6 +119,7 @@ public final class Solution {
         // write your code here to display the score report
         int totalScore = 0;
         for (int i = 0; i < (quiz.questions).length-3; i++) {
+            System.out.println(i);
             System.out.println(quiz.getQuestion(i));
             String refer = quiz.getchosen(i);
             System.out.println(refer);
