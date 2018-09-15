@@ -124,6 +124,7 @@ public final class Solution {
             String[] reference = refer.split(" ");
             System.out.println(refer);
             System.out.println(reference[1]);
+            System.out.println(quiz.getrightans(i));
             if (reference[1].equals(quiz.getrightans(i))) {
                 System.out.println("Correct Answer! - Marks Awarded: " + quiz.getmaxmarks(i));
                 totalScore = totalScore+Integer.parseInt(quiz.getmaxmarks(i));
