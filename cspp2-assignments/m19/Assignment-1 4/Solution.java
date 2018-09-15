@@ -68,7 +68,6 @@ public final class Solution {
             for (int i = 0; i < questionCount; i++) {
                 String line =  s.nextLine();
                 String[] parts = line.split(":");
-                System.out.println(Arrays.toString(parts));
                 quiz.addQuestion(i, parts[0]);
                 quiz.addchoices(i, parts[1]);
                 quiz.addrightans(i, parts[2]);
@@ -101,8 +100,6 @@ public final class Solution {
             for (String ele : choicesare) {
                 System.out.print(ele + "    ");
             }
-            System.out.println();
-
             String chosen = s.nextLine();
             quiz.addchosenans(i, (chosen));
             k++;
