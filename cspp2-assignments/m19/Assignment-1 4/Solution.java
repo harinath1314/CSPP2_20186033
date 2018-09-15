@@ -106,7 +106,7 @@ public final class Solution {
             
             
             System.out.println();
-            System.out.println();
+            // System.out.println();
             String chosen = s.nextLine();
             quiz.addchosenans(i, chosen);
             k++;
@@ -139,7 +139,7 @@ public final class Solution {
                 System.out.println(" Correct Answer! - Marks Awarded: " + quiz.getmaxmarks(i));
                 totalScore = totalScore+Integer.parseInt(quiz.getmaxmarks(i));
             } else {
-                System.out.println("Wrong Answer! - Penalty: " + quiz.getpenalty(i));
+                System.out.println(" Wrong Answer! - Penalty: " + quiz.getpenalty(i));
                 totalScore = totalScore+Integer.parseInt(quiz.getpenalty(i));
             }
         }
