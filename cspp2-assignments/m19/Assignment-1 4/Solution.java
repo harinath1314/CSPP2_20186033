@@ -98,9 +98,13 @@ public final class Solution {
             System.out.println(quiz.getQuestion(i) + "(" + k + ")");
 
             String[] choicesare = quiz.getchoices(i).split(",");
-            for (String ele : choicesare) {
-                System.out.print(ele + "\t");
+            for (i = 0;i<3 ; i++) {
+                System.out.print(choicesare[i] + "\t");
             }
+            System.out.println(choicesare[4]);
+            
+            
+            
             System.out.println();
             System.out.println();
             String chosen = s.nextLine();
