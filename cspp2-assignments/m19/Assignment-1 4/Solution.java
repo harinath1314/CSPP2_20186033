@@ -127,7 +127,7 @@ public final class Solution {
             System.out.println(i);
             System.out.println(quiz.getQuestion(i));
             String refer = quiz.getchosen(i);
-            System.out.println(refer);
+            // System.out.println(refer);
             String[] reference = refer.split(" ");
             // System.out.println(Arrays.toString(quiz.questions));
             // System.out.println(Arrays.toString(quiz.choices));
