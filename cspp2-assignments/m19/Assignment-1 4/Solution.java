@@ -100,7 +100,8 @@ public final class Solution {
             for (String ele : choicesare) {
                 System.out.print(ele + "    ");
             }
-            System.out.println();
+            System.out.println("harinath");
+            System.out.println("loves");
             String chosen = s.next();
             quiz.addchosenans(i, chosen);
             k++;
