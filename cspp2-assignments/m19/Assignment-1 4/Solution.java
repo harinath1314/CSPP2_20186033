@@ -118,9 +118,10 @@ public final class Solution {
     public static void displayScore(final Quiz quiz) {
         // write your code here to display the score report
         int totalScore = 0;
-        for (int i = 0; i < (quiz.questions).length; i++) {
+        for (int i = 0; i < (quiz.questions).length-1; i++) {
             System.out.println(quiz.getQuestion(i));
             String refer = quiz.getchosen(i);
+            System.out.println(refer);
             String[] reference = refer.split(" ");
             if (Integer.parseInt(reference[1]) == (Integer.parseInt(quiz.getrightans(i)))) {
                 System.out.println("Correct Answer! - Marks Awarded: " + quiz.getmaxmarks(i));
