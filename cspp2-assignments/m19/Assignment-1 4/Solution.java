@@ -121,7 +121,10 @@ public final class Solution {
         for (int i = 0; i < (quiz.questions).length; i++) {
             System.out.println(quiz.getQuestion(i));
             String refer = quiz.getchosen(i);
-            if (refer.equals(quiz.getrightans(i))) {
+            String[] reference = refer.split(" ");
+            System.out.println(refer);
+            System.out.println(reference[1]);
+            if (reference[1].equals(quiz.getrightans(i))) {
                 System.out.println("Correct Answer! - Marks Awarded: " + quiz.getmaxmarks(i));
                 totalScore = totalScore+Integer.parseInt(quiz.getmaxmarks(i));
             } else {
