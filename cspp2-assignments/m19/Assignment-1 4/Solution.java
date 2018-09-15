@@ -143,7 +143,7 @@ public final class Solution {
                 totalScore = totalScore+Integer.parseInt(quiz.getpenalty(i));
             }
         }
-        System.out.println("Total Score :" + totalScore);
+        System.out.println("Total Score: " + totalScore);
 
     }
 }
