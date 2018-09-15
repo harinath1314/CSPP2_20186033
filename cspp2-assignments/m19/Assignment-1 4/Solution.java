@@ -122,9 +122,6 @@ public final class Solution {
             System.out.println(quiz.getQuestion(i));
             String refer = quiz.getchosen(i);
             String[] reference = refer.split(" ");
-            System.out.println(refer);
-            System.out.println(reference[1]);
-            System.out.println(quiz.getrightans(i));
             if (Integer.parseInt(reference[1]) == (Integer.parseInt(quiz.getrightans(i)))) {
                 System.out.println("Correct Answer! - Marks Awarded: " + quiz.getmaxmarks(i));
                 totalScore = totalScore+Integer.parseInt(quiz.getmaxmarks(i));
@@ -146,12 +143,12 @@ class Quiz {
     public String[] penalty;
     public String[] chosenans;
     Quiz() {
-        questions = new String[50];
-        choices = new String[50];
-        rightans = new String[50];
-        maxmarks = new String[50];
-        penalty = new String[50];
-        chosenans = new String[50];
+        questions = new String[14];
+        choices = new String[14];
+        rightans = new String[14];
+        maxmarks = new String[14];
+        penalty = new String[14];
+        chosenans = new String[14];
 
     }
     public void addQuestion(int size, String quest) {
