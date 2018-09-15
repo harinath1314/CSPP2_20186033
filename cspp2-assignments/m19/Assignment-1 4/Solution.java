@@ -99,7 +99,7 @@ public final class Solution {
 
             String[] choicesare = quiz.getchoices(i).split(",");
             for (String ele : choicesare) {
-                System.out.print(ele + "        ");
+                System.out.print(ele + "\t");
             }
             System.out.println();
             System.out.println();
@@ -139,7 +139,7 @@ public final class Solution {
                 totalScore = totalScore+Integer.parseInt(quiz.getpenalty(i));
             }
         }
-        System.out.println("Total Score -" + totalScore);
+        System.out.println("Total Score :" + totalScore);
 
     }
 }
