@@ -148,6 +148,7 @@ class Quiz {
         rightans = new String[50];
         maxmarks = new String[50];
         penalty = new String[50];
+        chosenans = new String[50];
 
     }
     public void addQuestion(int size, String quest) {
