@@ -65,7 +65,7 @@ public final class Solution {
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
         if ( questionCount >= 1) {
-            System.out.println(questionCount + " are added to the Quiz");
+            System.out.println(questionCount + " are added to the quiz");
             for (int i = 0; i < questionCount; i++) {
                 String line =  s.nextLine();
                 String[] parts = line.split(":");
