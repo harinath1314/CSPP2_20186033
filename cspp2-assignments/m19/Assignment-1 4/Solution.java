@@ -124,7 +124,7 @@ public final class Solution {
         // write your code here to display the score report
         int totalScore = 0;
         for (int i = 0; i < (quiz.questions).length-10; i++) {
-            System.out.println(i);
+            // System.out.println(i);
             System.out.println(quiz.getQuestion(i));
             String refer = quiz.getchosen(i);
             // System.out.println(refer);
@@ -136,7 +136,7 @@ public final class Solution {
             // System.out.println(Arrays.toString(quiz.penalty));
             // System.out.println(Arrays.tostring(quiz.chosenans));
             if (Integer.parseInt(reference[1]) == (Integer.parseInt(quiz.getrightans(i)))) {
-                System.out.println("Correct Answer! - Marks Awarded: " + quiz.getmaxmarks(i));
+                System.out.println(" Correct Answer! - Marks Awarded: " + quiz.getmaxmarks(i));
                 totalScore = totalScore+Integer.parseInt(quiz.getmaxmarks(i));
             } else {
                 System.out.println("Wrong Answer! - Penalty: " + quiz.getpenalty(i));
