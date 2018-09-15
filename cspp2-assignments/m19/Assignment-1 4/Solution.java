@@ -101,7 +101,7 @@ public final class Solution {
             for (i = 0;i<3 ; i++) {
                 System.out.print(choicesare[i] + "\t");
             }
-            System.out.println(choicesare[4]);
+            System.out.println(choicesare[3]);
             
             
             
