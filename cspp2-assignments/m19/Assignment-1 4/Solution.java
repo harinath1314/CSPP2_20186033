@@ -98,7 +98,7 @@ public final class Solution {
 
             String[] choicesare = quiz.getchoices(i).split(",");
             for (String ele : choicesare) {
-                System.out.print(ele + "    ");
+                System.out.print(ele + "        ");
             }
             System.out.println();
             System.out.println();
@@ -122,7 +122,7 @@ public final class Solution {
             System.out.println(quiz.getQuestion(i));
             String refer = quiz.getchosen(i);
             String[] reference = refer.split(" ");
-            if (reference[1] == quiz.getrightans(i)) {
+            if (reference[1].equals(quiz.getrightans(i))) {
                 System.out.println("Correct Answer! - Marks Awarded: " + quiz.getmaxmarks(i));
                 totalScore = totalScore+Integer.parseInt(quiz.getmaxmarks(i));
             } else {
