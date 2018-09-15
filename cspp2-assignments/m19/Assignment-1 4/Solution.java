@@ -131,11 +131,11 @@ public final class Solution {
             String[] reference = refer.split(" ");
             // System.out.println(Arrays.toString(quiz.questions));
             // System.out.println(Arrays.toString(quiz.choices));
-            // // System.out.println(Arrays.tostring(quiz.rightans));
+            // System.out.println(Arrays.toString(quiz.rightans));
             // System.out.println(Arrays.toString(quiz.maxmarks));
             // System.out.println(Arrays.toString(quiz.penalty));
-            // System.out.println(Arrays.tostring(quiz.chosenans));
-            if (Integer.parseInt(reference[1]) == (Integer.parseInt(quiz.getrightans(i)))) {
+            // System.out.println(Arrays.toString(quiz.chosenans));
+            if (reference[1] == quiz.getrightans(i)) {
                 System.out.println(" Correct Answer! - Marks Awarded: " + quiz.getmaxmarks(i));
                 totalScore = totalScore+Integer.parseInt(quiz.getmaxmarks(i));
             } else {
@@ -155,6 +155,7 @@ class Quiz {
     public String[] maxmarks;
     public String[] penalty;
     public String[] chosenans;
+    
     Quiz() {
         questions = new String[14];
         choices = new String[14];
