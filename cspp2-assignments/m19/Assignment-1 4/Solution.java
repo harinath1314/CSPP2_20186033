@@ -118,8 +118,8 @@ public final class Solution {
 			String refer = quiz.getchosen(i);
 			// System.out.println(refer);
 			String[] reference = refer.split(" ");
-			System.out.println(Arrays.toString(quiz.rightans));
-			System.out.println(Arrays.toString(quiz.chosenans));
+			// System.out.println(Arrays.toString(quiz.rightans));
+			// System.out.println(Arrays.toString(quiz.chosenans));
 
 			if (reference[1].equals(quiz.getrightans(i))) {
 				System.out.println(" Correct Answer! - Marks Awarded: " + quiz.getmaxmarks(i));
