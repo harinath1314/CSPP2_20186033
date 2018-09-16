@@ -90,7 +90,7 @@ public final class Solution {
 		int k = 1;
 		for (int i = 0; i < answerCount; i++) {
 			if (k > 4 ) {
-				k = 0;
+				k = 1;
 			}
 			System.out.println(quiz.getQuestion(i) + "(" + k + ")");
 			String[] choicesare = quiz.getchoices(i).split(",");
@@ -118,6 +118,9 @@ public final class Solution {
 			String refer = quiz.getchosen(i);
 			// System.out.println(refer);
 			String[] reference = refer.split(" ");
+			System.out.println(Arrays.toString(quiz.rightans));
+			System.out.println(Arrays.toString(quiz.chosenans));
+
 			if (reference[1].equals(quiz.getrightans(i))) {
 				System.out.println(" Correct Answer! - Marks Awarded: " + quiz.getmaxmarks(i));
 				totalScore = totalScore + Integer.parseInt(quiz.getmaxmarks(i));
