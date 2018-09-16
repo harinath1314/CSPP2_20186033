@@ -120,6 +120,22 @@ public final class Solution {
 			String[] reference = refer.split(" ");
 			// System.out.println(Arrays.toString(quiz.rightans));
 			// System.out.println(Arrays.toString(quiz.chosenans));
+			switch (reference[1]) {
+			case "a":
+				reference[1] = "1";
+				break;
+			case "b":
+				reference[1] = "2";
+				break;
+			case "c":
+				reference[1] = "3";
+				break;
+			case "d":
+				reference[1] = "4";
+				break;
+			default:
+				break;
+			}
 
 			if (reference[1].equals(quiz.getrightans(i))) {
 				System.out.println(" Correct Answer! - Marks Awarded: " + quiz.getmaxmarks(i));
