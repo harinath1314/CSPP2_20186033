@@ -89,6 +89,9 @@ public final class Solution {
 		// store the user respones in the quiz object
 		int k = 1;
 		for (int i = 0; i < answerCount; i++) {
+			if (k > 4 ) {
+				k = 0;
+			}
 			System.out.println(quiz.getQuestion(i) + "(" + k + ")");
 			String[] choicesare = quiz.getchoices(i).split(",");
 			for (int l = 0; l < 3 ; l++) {
