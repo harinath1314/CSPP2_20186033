@@ -299,7 +299,7 @@ public final class Solution {
                                 > choicelist.length) {
                             System.out.println(
                                 "Error! Correct answer choice"
-                                + "number is out of range for "
+                                + " number is out of range for "
                                 + parts[0]);
                             break;
 
@@ -312,7 +312,7 @@ public final class Solution {
                                     quiz.addQuestion(w);
 
                                 } else {
-                                    System.out.println("Invalid max marks for "
+                                    System.out.println("Invalid penalty for "
                                                        + parts[0]);
                                     break;
                                 }
@@ -334,7 +334,7 @@ public final class Solution {
 
 
         }
-        if (Quiz.getsize() == q) {
+        if (Quiz.getsize() == q && q > 0) {
             System.out.println(q + " are added to the quiz");
         }
 
