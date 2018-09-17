@@ -62,7 +62,8 @@ class Question {
 	 * @return     { description_of_the_return_value }
 	 */
 	public boolean evaluateResponse(final String choice) {
-		if ((this.correctAnswer).equals(choice.substring(8))) {
+		String[] refer = choice.split(" ");
+		if ((this.correctAnswer).equals(refer[1])) {
 			return true;
 		} return false;
 
