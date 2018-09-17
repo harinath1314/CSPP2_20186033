@@ -63,6 +63,23 @@ class Question {
 	 */
 	public boolean evaluateResponse(final String choice) {
 		String[] refer = choice.split(" ");
+		switch (refer[1]){
+		case "a":
+			refer[1] = "1";
+			break;
+		case "b":
+			refer[1] = "2";
+			break;
+		case "c":
+			refer[1] = "3";
+			break;
+		case "d":
+			refer[1] = "4";
+			break;
+		default:
+			break;
+		}
+
 		if ((this.correctAnswer).equals(refer[1])) {
 			return true;
 		} return false;
