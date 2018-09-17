@@ -244,10 +244,8 @@ public final class Solution {
                 System.out.println("|----------------|");
                 System.out.println("| Load Questions |");
                 System.out.println("|----------------|");
-                if (Integer.parseInt(tokens[1]) >= 1) {
                     loadQuestions(s, q, Integer.parseInt(tokens[1]));
                     break;
-                }
 
             case "START_QUIZ":
                 System.out.println("|------------|");
@@ -281,57 +279,57 @@ public final class Solution {
         // add the question objects to the quiz class
         if (q == 0) {
             System.out.println("Quiz does not have questions");
-        } else{
-        final int three = 3, four = 4, five = 5;
-        for (int i = 0; i < q; i++) {
-            String line =  scan.nextLine();
-            String[] parts = line.split(":");
-            String[] choicelist = parts[1].split(",");
-            if (parts.length != five) {
-                System.out.println("Error! Malformed question");
-                break;
-            } else {
-                if (choicelist.length < 2) {
-                    System.out.println(parts[0]
-                                       + "does not have enough answer choices");
+        } else {
+            final int three = 3, four = 4, five = 5;
+            for (int i = 0; i < q; i++) {
+                String line =  scan.nextLine();
+                String[] parts = line.split(":");
+                String[] choicelist = parts[1].split(",");
+                if (parts.length != five) {
+                    System.out.println("Error! Malformed question");
                     break;
                 } else {
-                    if (Integer.parseInt(parts[2])
-                            < 1 || Integer.parseInt(parts[2])
-                            > choicelist.length) {
-                        System.out.println(
-                            "Error! Correct answer choice"
-                            + "number is out of range for "
-                            + parts[0]);
+                    if (choicelist.length < 2) {
+                        System.out.println(parts[0]
+                                           + "does not have enough answer choices");
                         break;
-
                     } else {
-                        if (Integer.parseInt(parts[three]) > 0) {
-                            if (Integer.parseInt(parts[four]) <= 0) {
-                                Question w = new Question(parts[0], choicelist,
-                                    (parts[2]), Integer.parseInt(parts[three]),
-                                    Integer.parseInt(parts[four]));
-                                quiz.addQuestion(w);
+                        if (Integer.parseInt(parts[2])
+                                < 1 || Integer.parseInt(parts[2])
+                                > choicelist.length) {
+                            System.out.println(
+                                "Error! Correct answer choice"
+                                + "number is out of range for "
+                                + parts[0]);
+                            break;
+
+                        } else {
+                            if (Integer.parseInt(parts[three]) > 0) {
+                                if (Integer.parseInt(parts[four]) <= 0) {
+                                    Question w = new Question(parts[0], choicelist,
+                                                              (parts[2]), Integer.parseInt(parts[three]),
+                                                              Integer.parseInt(parts[four]));
+                                    quiz.addQuestion(w);
+
+                                } else {
+                                    System.out.println("Invalid max marks for "
+                                                       + parts[0]);
+                                    break;
+                                }
 
                             } else {
                                 System.out.println("Invalid max marks for "
                                                    + parts[0]);
                                 break;
+
                             }
-
-                        } else {
-                            System.out.println("Invalid max marks for "
-                                               + parts[0]);
-                            break;
-
                         }
+
+
                     }
 
-
                 }
-
             }
-        }
 
 
 
