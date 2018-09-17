@@ -285,7 +285,8 @@ public final class Solution {
                 String line =  scan.nextLine();
                 String[] parts = line.split(":");
                 String[] choicelist = parts[1].split(",");
-                if (parts.length != five || parts[0].length() == 0 || parts[4].length() == 0) {
+                if (parts.length != five ||
+                    parts[0].length() == 0 || parts[four].length() == 0) {
                     System.out.println("Error! Malformed question");
                     break;
                 } else {
