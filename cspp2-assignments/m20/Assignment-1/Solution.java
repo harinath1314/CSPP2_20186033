@@ -62,7 +62,7 @@ class Question {
      */
     public boolean evaluateResponse(final String choice) {
         String[] refer = choice.split(" ");
-        switch (refer[1]){
+        switch (refer[1]) {
         case "a":
             refer[1] = "1";
             break;
@@ -208,7 +208,7 @@ class Quiz {
      *
      * @return     { description_of_the_return_value }
      */
-    public static int getsize () {
+    public static int getsize() {
         return size;
     }
 
@@ -286,35 +286,40 @@ public final class Solution {
             String[] choicelist = parts[1].split(",");
             if (parts.length != five) {
                 System.out.println("Error! Malformed question");
+                break;
             } else {
-                if ( choicelist.length < 2 ) {
-                    System.out.println( parts[0] 
-                        +"does not have enough answer choices");
+                if (choicelist.length < 2) {
+                    System.out.println(parts[0]
+                                       + "does not have enough answer choices");
+                    break;
                 } else {
                     if (Integer.parseInt(parts[2])
-                            < 1 || Integer.parseInt(parts[2]) 
-                            >choicelist.length) {
+                            < 1 || Integer.parseInt(parts[2])
+                            > choicelist.length) {
                         System.out.println(
                             "Error! Correct answer choice"
                             + "number is out of range for "
                             + parts[0]);
+                        break;
 
                     } else {
                         if (Integer.parseInt(parts[three]) > 0) {
                             if (Integer.parseInt(parts[four]) <= 0) {
                                 Question w = new Question(parts[0], choicelist,
-                                        (parts[2]), Integer.parseInt(parts[three]),
-                                        Integer.parseInt(parts[four]));
+                                                          (parts[2]), Integer.parseInt(parts[three]),
+                                                          Integer.parseInt(parts[four]));
                                 quiz.addQuestion(w);
 
                             } else {
                                 System.out.println("Invalid max marks for "
                                                    + parts[0]);
+                                break;
                             }
 
                         } else {
                             System.out.println("Invalid max marks for "
                                                + parts[0]);
+                            break;
 
                         }
                     }
@@ -351,10 +356,10 @@ public final class Solution {
         // read the user responses from the console using scanner object.
         // store the user respone in the question object
         //
-        for (int i = 0; i < q; i++) {
+        for (int i = 0; i < quiz.getsize(); i++) {
             int j;
-            System.out.println((quiz.getQuestion(i)).getQuestionText() +
-                               "(" + (quiz.getQuestion(i)).getMaxMarks() + ")");
+            System.out.println((quiz.getQuestion(i)).getQuestionText()
+                               + "(" + (quiz.getQuestion(i)).getMaxMarks() + ")");
             for (j = 0; j
                     < (((quiz.getQuestion(i)).getChoice()).length) - 1; j++) {
                 System.out.print(((quiz.getQuestion(i)).getChoice())[j] + "\t");
