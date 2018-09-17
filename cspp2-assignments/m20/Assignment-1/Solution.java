@@ -273,7 +273,7 @@ public final class Solution {
 
 					} else {
 						if (Integer.parseInt(parts[3]) > 0) {
-							if (Integer.parseInt(parts[4]) < 0) {
+							if (Integer.parseInt(parts[4]) <= 0) {
 								Question w = new Question(parts[0], choicelist,
 								                          (parts[2]), Integer.parseInt(parts[3]),
 								                          Integer.parseInt(parts[4]));
@@ -351,7 +351,7 @@ public final class Solution {
 				System.out.println(" Correct Answer! - Marks Awarded: " + l.getMaxMarks());
 				totalscore += l.getMaxMarks();
 			} else {
-				System.out.println(" Wrong Answer! - penalty: " + l.getPenalty());
+				System.out.println(" Wrong Answer! - Penalty: " + l.getPenalty());
 				totalscore += l.getPenalty();
 
 			}
