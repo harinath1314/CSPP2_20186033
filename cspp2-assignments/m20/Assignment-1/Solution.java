@@ -285,13 +285,13 @@ public final class Solution {
                 String line =  scan.nextLine();
                 String[] parts = line.split(":");
                 String[] choicelist = parts[1].split(",");
-                if (parts.length == five && parts[0].length() == 0) {
+                if (parts.length == five && parts[0].length() == 0 && parts[4].length() == 0) {
                     System.out.println("Error! Malformed question");
                     break;
                 } else {
                     if (choicelist.length < 2) {
                         System.out.println(parts[0]
-                                           +  " does not have enough answer choices");
+                            +  " does not have enough answer choices");
                         break;
                     } else {
                         if (Integer.parseInt(parts[2])
@@ -306,9 +306,11 @@ public final class Solution {
                         } else {
                             if (Integer.parseInt(parts[three]) > 0) {
                                 if (Integer.parseInt(parts[four]) <= 0) {
-                                    Question w = new Question(parts[0], choicelist,
-                                                              (Integer.parseInt(parts[2])), Integer.parseInt(parts[three]),
-                                                              Integer.parseInt(parts[four]));
+                                    Question w = new Question(parts[0],
+                                        choicelist,
+                                    (Integer.parseInt(parts[2])),
+                                    Integer.parseInt(parts[three]),
+                                    Integer.parseInt(parts[four]));
                                     quiz.addQuestion(w);
 
                                 } else {
@@ -355,7 +357,8 @@ public final class Solution {
         for (int i = 0; i < quiz.getsize(); i++) {
             int j;
             System.out.println((quiz.getQuestion(i)).getQuestionText()
-                               + "(" + (quiz.getQuestion(i)).getMaxMarks() + ")");
+                               + "(" + (quiz.getQuestion(i)).getMaxMarks()
+                               + ")");
             for (j = 0; j
                     < (((quiz.getQuestion(i)).getChoice()).length) - 1; j++) {
                 System.out.print(((quiz.getQuestion(i)).getChoice())[j] + "\t");
@@ -377,7 +380,7 @@ public final class Solution {
     public static void displayScore(final Quiz quiz) {
         // write your code here to display the score report using quiz object.
         int totalscore = 0;
-        if (quiz.getsize() >0) {
+        if (quiz.getsize() > 0) {
             for (int i = 0; i < quiz.getsize(); i++) {
             Question l = quiz.getQuestion(i);
             System.out.println(l.getQuestionText());
@@ -396,7 +399,7 @@ public final class Solution {
         }
         System.out.println("Total Score: " + totalscore);
         }
-        
+
     }
 }
 
