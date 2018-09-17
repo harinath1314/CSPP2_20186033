@@ -121,7 +121,7 @@ class Question {
 	 * @return     The response.
 	 */
 	public String getResponse() {
-		return null;
+		return response;
 	}
 	/**
 	 * Returns a string representation of the object.
@@ -328,6 +328,7 @@ public final class Solution {
 
 			}
 			System.out.print(((quiz.getQuestion(i)).getChoice())[j]);
+			System.out.println();
 			System.out.println();
 			quiz.getQuestion(i).setResponse(scan.nextLine());
 
