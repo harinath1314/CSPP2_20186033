@@ -279,6 +279,9 @@ public final class Solution {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
+        if (q == 0) {
+            System.out.println("Quiz does not have questions");
+        } else{
         final int three = 3, four = 4, five = 5;
         for (int i = 0; i < q; i++) {
             String line =  scan.nextLine();
@@ -306,8 +309,8 @@ public final class Solution {
                         if (Integer.parseInt(parts[three]) > 0) {
                             if (Integer.parseInt(parts[four]) <= 0) {
                                 Question w = new Question(parts[0], choicelist,
-                                                          (parts[2]), Integer.parseInt(parts[three]),
-                                                          Integer.parseInt(parts[four]));
+                                    (parts[2]), Integer.parseInt(parts[three]),
+                                    Integer.parseInt(parts[four]));
                                 quiz.addQuestion(w);
 
                             } else {
@@ -328,18 +331,13 @@ public final class Solution {
                 }
 
             }
+        }
 
 
 
         }
         if (Quiz.getsize() == q) {
             System.out.println(q + " are added to the quiz");
-        } else {
-            if (Quiz.getsize() == 0) {
-                System.out.println("Quiz does not have questions");
-            }
-
-
         }
 
     }
