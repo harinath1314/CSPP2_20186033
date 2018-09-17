@@ -267,7 +267,7 @@ public final class Solution {
 				if ( choicelist.length < 2 ) {
 					System.out.println( parts[0] + "does not have enough answer choices");
 				} else {
-					if (Integer.parseInt(parts[0]) < 1 || Integer.parseInt(parts[0]) > choicelist.length) {
+					if (Integer.parseInt(parts[2]) < 1 || Integer.parseInt(parts[2]) > choicelist.length) {
 						System.out.println("Error! Correct answer choice number is out of range for " + parts[0]);
 
 					} else {
