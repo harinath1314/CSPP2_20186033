@@ -211,7 +211,6 @@ public final class Solution {
 				System.out.println("| Load Questions |");
 				System.out.println("|----------------|");
 				if (Integer.parseInt(tokens[1]) >= 1) {
-					System.out.println(Integer.parseInt(tokens[1]) + " are added to the quiz");
 					loadQuestions(s, q, Integer.parseInt(tokens[1]));
 					break;
 				} else {
@@ -269,6 +268,7 @@ public final class Solution {
 								                          Integer.parseInt(parts[2]), Integer.parseInt(parts[3]),
 								                          Integer.parseInt(parts[4]));
 								quiz.addQuestion(w);
+								System.out.println(q + " are added to the quiz");
 							}
 							else{
 								System.out.println("Invalid max marks for "+ parts[0]);
