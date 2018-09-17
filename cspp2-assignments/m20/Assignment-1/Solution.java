@@ -377,7 +377,8 @@ public final class Solution {
     public static void displayScore(final Quiz quiz) {
         // write your code here to display the score report using quiz object.
         int totalscore = 0;
-        for (int i = 0; i < quiz.getsize(); i++) {
+        if (quiz.getsize() >0) {
+            for (int i = 0; i < quiz.getsize(); i++) {
             Question l = quiz.getQuestion(i);
             System.out.println(l.getQuestionText());
             if (l.evaluateResponse(l.getResponse())) {
@@ -394,6 +395,8 @@ public final class Solution {
 
         }
         System.out.println("Total Score: " + totalscore);
+        }
+        
     }
 }
 
