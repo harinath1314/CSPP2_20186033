@@ -43,11 +43,11 @@ class Question {
      * @param      penalty1        The penalty 1
      */
     Question(final String question1, final String[] choices1,
-             final String correctAnswer1,
+             final int correctAnswer1,
              final int maxMarks1, final int penalty1) {
         this.questiontext = question1;
         this.choices = choices1;
-        this.correctAnswer = correctAnswer1;
+        this.correctAnswer = choices[correctAnswer1 - 1].split(" ")[1];
         this.maxMarks = maxMarks1;
         this.penalty = penalty1;
 
@@ -62,22 +62,22 @@ class Question {
      */
     public boolean evaluateResponse(final String choice) {
         String[] refer = choice.split(" ");
-        switch (refer[1]) {
-        case "a":
-            refer[1] = "1";
-            break;
-        case "b":
-            refer[1] = "2";
-            break;
-        case "c":
-            refer[1] = "3";
-            break;
-        case "d":
-            refer[1] = "4";
-            break;
-        default:
-            break;
-        }
+        // switch (refer[1]) {
+        // case "a":
+        //     refer[1] = "1";
+        //     break;
+        // case "b":
+        //     refer[1] = "2";
+        //     break;
+        // case "c":
+        //     refer[1] = "3";
+        //     break;
+        // case "d":
+        //     refer[1] = "4";
+        //     break;
+        // default:
+        //     break;
+        // }
 
         if ((this.correctAnswer).equals(refer[1])) {
             return true;
@@ -291,7 +291,7 @@ public final class Solution {
                 } else {
                     if (choicelist.length < 2) {
                         System.out.println(parts[0]
-                                           + "does not have enough answer choices");
+                                           +  " does not have enough answer choices");
                         break;
                     } else {
                         if (Integer.parseInt(parts[2])
@@ -307,7 +307,7 @@ public final class Solution {
                             if (Integer.parseInt(parts[three]) > 0) {
                                 if (Integer.parseInt(parts[four]) <= 0) {
                                     Question w = new Question(parts[0], choicelist,
-                                                              (parts[2]), Integer.parseInt(parts[three]),
+                                                              (Integer.parseInt(parts[2])), Integer.parseInt(parts[three]),
                                                               Integer.parseInt(parts[four]));
                                     quiz.addQuestion(w);
 
