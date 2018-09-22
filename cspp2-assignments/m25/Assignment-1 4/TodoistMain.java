@@ -112,8 +112,9 @@ class Todoist{
 	public int totalTime4Completion() {
 		int totaltime = 0;
 		for (Task each : todolist) {
+			if(each.status == "todo") {
 			totaltime += each.timeToComplete;
-			
+			}
 		}
 		return totaltime;
 	}
