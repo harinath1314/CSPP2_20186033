@@ -96,7 +96,7 @@ class Todoist{
 
 	public void toprint(){
 		for (Task toli : todolist) {
-			toli.toString();
+			System.out.println(toli);;
 		}
 	}
 
