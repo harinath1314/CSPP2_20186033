@@ -36,10 +36,41 @@ class Task{
 		this.important = imp;
 		this.urgent = urg;
 		this.status = stat;
+
 	}
+	/**
+	 * Returns a string representation of the object.
+	 *
+	 * @return     String representation of the object.
+	 */
 	public String toString(){
-		return title +", "+assignedTo+", "+timeToComplete+", "+important+", "+urgent+", "+status;
+		return title +", "+assignedTo+", "+timeToComplete+", "+setimp()+", "+seturg()+", "+status;
 	}
+	/**
+	 * { function_description }
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
+	public String setimp() {
+		if(important == true) {
+			return  "Important";
+		}else{
+			return "Not Important";
+		}
+	}
+
+	public String seturg(){
+		if (urgent == true){
+			return "Urgent";
+		}else{
+			return "Not Urgent";
+		}
+	}
+	// public String setstat() {
+	// 	if (status == todo){
+	// 		return "todo";
+	// 	}
+	// }
 
 }
 /**
