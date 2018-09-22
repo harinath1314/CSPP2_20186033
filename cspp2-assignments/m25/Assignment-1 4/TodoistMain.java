@@ -111,7 +111,8 @@ class Todoist {
         return null;
     }
 
-    // public Task getNextTask(final String name, final int num) {
+    // public Array getNextTask(final String name, final int num) {
+    //     String[Task] list = new 
     //     for (Task each : todolist) {
     //         if (((each.assignedTo == name) && (each.status == "todo"))
     //                 && ((each.important && each.urgent))) {
