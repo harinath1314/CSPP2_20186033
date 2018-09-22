@@ -96,6 +96,9 @@ class Plagrism {
 
 
                     }
+                    if (freq.size() == 0 &&freq2.size() == 0) {
+                        throw new FileNotFoundException("emo");
+                    }
                     System.out.print(plag_percent(freq, freq2) + "\t");
                 } catch (FileNotFoundException e) {
                     System.out.println("File not Found");
