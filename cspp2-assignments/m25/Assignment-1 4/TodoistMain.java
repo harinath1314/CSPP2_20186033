@@ -4,7 +4,6 @@
  * exam : week-4 cspp2;
  */
 import java.util.Scanner;
-import java.util.Arrays;
 import java.util.ArrayList;
 
 /**
@@ -29,7 +28,8 @@ class Task {
 	 * @param      urg   The urgency of the task
 	 * @param      stat  The status of task
 	 */
-	Task(String titl, String pers, int tim, boolean imp, boolean urg, String stat) {
+	Task(final String titl, final String pers, final int tim, final boolean imp, final boolean urg,
+		String stat) {
 		this.title = titl;
 		this.assignedTo = pers;
 		this.timeToComplete = tim;
@@ -44,10 +44,11 @@ class Task {
 	 * @return     String representation of the object.
 	 */
 	public String toString() {
-		return title + ", " + assignedTo + ", " + timeToComplete + ", " + setimp() + ", " + seturg() + ", " + status;
+		return title + ", " + assignedTo + ", " + timeToComplete + ", "
+		+ setimp() + ", " + seturg() + ", " + status;
 	}
-	/**
-	 * { function_description }
+	/**.
+	 * set important function.
 	 *
 	 * @return     { description_of_the_return_value }
 	 */
@@ -58,7 +59,11 @@ class Task {
 			return "Not Important";
 		}
 	}
-
+	/**.
+	 * seturgent dunction.
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
 	public String seturg() {
 		if (urgent == true) {
 			return "Urgent";
@@ -66,23 +71,19 @@ class Task {
 			return "Not Urgent";
 		}
 	}
-	// public String setstat() {
-	// 	if (status == todo){
-	// 		return "todo";
-	// 	}
-	// }
+
 
 }
 /**
  * Class for todoist.
  */
-class Todoist{
+class Todoist {
 	public ArrayList<Task> todolist;
 
 	/**
 	 * Constructs the object for Todoist class.
 	 */
-	Todoist(){
+	Todoist() {
 		todolist = new ArrayList<Task>();
 	}
 	/**
@@ -90,30 +91,43 @@ class Todoist{
 	 *
 	 * @param      t  is the Task object.
 	 */
-	public void addTask(Task t){
+	public void addTask(final Task t) {
 		todolist.add(t);
 	}
-
-	public Task getNextTask(String name){
-		for (Task each: todolist) {
-			if(((each.assignedTo == name) && (each.status == "todo")) &&( (each.important && each.urgent))){
+	/**
+	 * Gets the next task.
+	 *
+	 * @param      name  The name
+	 *
+	 * @return     The next task.
+	 */
+	public Task getNextTask(final String name) {
+		for (Task each : todolist) {
+			if (((each.assignedTo == name) && (each.status == "todo"))
+				&& ( (each.important && each.urgent))) {
 				return each;
 			}
-			}
+		}
 		return null;
 	}
-
-	public void toprint(){
+	/**
+	 * to print function
+	 */
+	public void toprint() {
 		for (Task toli : todolist) {
 			System.out.println(toli);;
 		}
 	}
-
+	/**
+	 * total time function.
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
 	public int totalTime4Completion() {
 		int totaltime = 0;
 		for (Task each : todolist) {
-			if(each.status.equals("todo")) {
-			totaltime += each.timeToComplete;
+			if (each.status.equals("todo")) {
+				totaltime += each.timeToComplete;
 			}
 		}
 		return totaltime;
@@ -142,22 +156,22 @@ public class TodoistMain {
 				testTask(tokens);
 				break;
 			case "add-task":
-			    testAddTask(todo, tokens);
-			break;
+				testAddTask(todo, tokens);
+				break;
 			case "print-todoist":
 				todo.toprint();
-			break;
+				break;
 			case "get-next":
-			    System.out.println(todo.getNextTask(tokens[1]));
-			break;
+				System.out.println(todo.getNextTask(tokens[1]));
+				break;
 			// case "get-next-n":
 			//     int n = Integer.parseInt(tokens[2]);
 			//     Task[] tasks = todo.getNextTask(tokens[1], n);
 			//     System.out.println(Arrays.deepToString(tasks));
 			// break;
 			case "total-time":
-			    System.out.println(todo.totalTime4Completion());
-			break;
+				System.out.println(todo.totalTime4Completion());
+				break;
 			default:
 				break;
 			}
@@ -171,11 +185,11 @@ public class TodoistMain {
 	 * @param      tokens  The tokens
 	 */
 	public static void testAddTask(final Todoist todo, final String[] tokens) {
-	    try {
-	        todo.addTask(createTask(tokens));
-	    } catch (Exception e) {
-	        System.out.println(e.getMessage());
-	    }
+		try {
+			todo.addTask(createTask(tokens));
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
 	}
 
 	/**
@@ -217,7 +231,7 @@ public class TodoistMain {
 			throw new Exception("Invalid status " + status);
 		}
 		return new Task(
-		           title, assignedTo, timeToComplete, important, urgent, status);
+		        title, assignedTo, timeToComplete, important, urgent, status);
 	}
 
 	/**
