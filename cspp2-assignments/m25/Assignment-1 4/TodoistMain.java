@@ -78,7 +78,7 @@ class Task {
  * Class for todoist.
  */
 class Todoist {
-    public ArrayList<Task> todolist;
+    private final ArrayList<Task> todolist;
 
     /**
      * Constructs the object for Todoist class.
@@ -103,13 +103,23 @@ class Todoist {
      */
     public Task getNextTask(final String name) {
         for (Task each : todolist) {
-            if (((each.assignedTo == name) && (each.status == "todo"))
-                    && ( (each.important && each.urgent))) {
+            if (((each.assignedTo.equals(name)) && (each.status.equals("todo")))
+                    && ((each.important && each.urgent))) {
                 return each;
             }
         }
         return null;
     }
+
+    // public Task getNextTask(final String name, final int num) {
+    //     for (Task each : todolist) {
+    //         if (((each.assignedTo == name) && (each.status == "todo"))
+    //                 && ((each.important && each.urgent))) {
+    //             return each;
+    //         }
+    //     }
+    //     return null;
+    // }
     /**
      * to print function
      */
@@ -142,6 +152,12 @@ class Todoist {
  * Class for todoist main.
  */
 public class TodoistMain {
+    /**
+     * Constructs the object.
+     */
+    private TodoistMain() {
+
+    }
 
     /**
      * Starts a test.
@@ -220,13 +236,13 @@ public class TodoistMain {
             throw new Exception("Title not provided");
         }
         String assignedTo = tokens[2];
-        int timeToComplete = Integer.parseInt(tokens[2+1]);
+        int timeToComplete = Integer.parseInt(tokens[2 + 1]);
         if (timeToComplete < 0) {
             throw new Exception("Invalid timeToComplete " + timeToComplete);
         }
-        boolean important = tokens[2+2].equals("y");
-        boolean urgent = tokens[2+2+1].equals("y");
-        String status = tokens[2+2+2];
+        boolean important = tokens[2 + 2].equals("y");
+        boolean urgent = tokens[2 + 2 + 1].equals("y");
+        String status = tokens[2 + 2 + 2];
         if (status.length() < 2 + 2) {
             throw new Exception("Invalid status " + status);
         }
