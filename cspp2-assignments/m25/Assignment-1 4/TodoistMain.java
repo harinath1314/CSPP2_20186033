@@ -96,11 +96,11 @@ class Todoist{
 
 	public Task getNextTask(String name){
 		for (Task each: todolist) {
-			if(name.equals(each.assignedTo) && (each.status == "todo"));{
+			if(name.equals(each.assignedTo) && (each.status == "todo") && (each.important == true) && (each.urgent == false)){
 				return each;
 			}
+			}
 			
-		}
 		return null;
 	}
 
