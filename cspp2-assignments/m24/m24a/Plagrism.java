@@ -18,6 +18,9 @@ class Plagrism {
      */
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
+        if(!input.nextLine().equals("")){
+
+        
         File test = new File(input.nextLine());
         File[] tested = test.listFiles();
         // System.out.print("\t\t");
@@ -96,9 +99,6 @@ class Plagrism {
 
 
                     }
-                    if (freq.size() == 0 &&freq2.size() == 0) {
-                        throw new FileNotFoundException("emo");
-                    }
                     System.out.print(plag_percent(freq, freq2) + "\t");
                 } catch (FileNotFoundException e) {
                     System.out.println("File not Found");
@@ -115,7 +115,11 @@ class Plagrism {
         // String input1 = "dfghjklkhgvfcghj/fghjklkjh/";
         //String input2 = "/Users/harinathareddy/Desktop/MSIT COURSES/CSPP2_20186033/cspp2-assignments/m23/input002.txt";
 
+    } 
+    else{
+        System.out.println("File not Found");
     }
+}
     /**
      * plagrism percentage calculation.
      *
