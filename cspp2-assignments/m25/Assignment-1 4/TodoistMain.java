@@ -180,6 +180,7 @@ public class TodoistMain {
         boolean important = tokens[4].equals("y");
         boolean urgent = tokens[5].equals("y");
         String status = tokens[6];
+        System.out.println(tokens[6]);
         if(status != "done" || status != "todo") {
         	throw new Exception("Invalid status "+ status);
         }
