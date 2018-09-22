@@ -76,16 +76,31 @@ class Task {
 /**
  * Class for todoist.
  */
+class Todoist{
+	public ArrayList<Task> todolist;
 
+	/**
+	 * Constructs the object for Todoist class.
+	 */
+	Todoist(){
+		todolist = new ArrayList<Task>();
+	}
+	/**
+	 * addtask add the Task objects.
+	 *
+	 * @param      t  is the Task object.
+	 */
+	public void addTask(Task t){
+		todolist.add(t);
+	}
 
+	public void toprint(){
+		for (Task toli : todolist) {
+			toli.toString();
+		}
+	}
 
-
-
-
-// class Todoist{
-// 	public ArrayList<Task> todolist = new ArrayList<Task>();
-
-// }
+}
 
 
 
@@ -99,7 +114,7 @@ public class TodoistMain {
 	 * Starts a test.
 	 */
 	public static void startTest() {
-		// Todoist todo = new Todoist();
+		Todoist todo = new Todoist();
 		Scanner s = new Scanner(System.in);
 		while (s.hasNext()) {
 			String[] tokens = s.nextLine().split(",");
@@ -107,12 +122,13 @@ public class TodoistMain {
 			case "task":
 				testTask(tokens);
 				break;
-			// case "add-task":
-			//     testAddTask(todo, tokens);
-			// break;
-			// case "print-todoist":
-			//     System.out.println(todo);
-			// break;
+			case "add-task":
+			    testAddTask(todo, tokens);
+			break;
+			case "print-todoist":
+			    // System.out.println(todo);
+				todo.toprint();
+			break;
 			// case "get-next":
 			//     System.out.println(todo.getNextTask(tokens[1]));
 			// break;
@@ -136,13 +152,13 @@ public class TodoistMain {
 	 * @param      todo    The todo
 	 * @param      tokens  The tokens
 	 */
-	// public static void testAddTask(final Todoist todo, final String[] tokens) {
-	//     try {
-	//         todo.addTask(createTask(tokens));
-	//     } catch (Exception e) {
-	//         System.out.println(e.getMessage());
-	//     }
-	// }
+	public static void testAddTask(final Todoist todo, final String[] tokens) {
+	    try {
+	        todo.addTask(createTask(tokens));
+	    } catch (Exception e) {
+	        System.out.println(e.getMessage());
+	    }
+	}
 
 	/**
 	 * method to test the creation of task object.
@@ -154,7 +170,6 @@ public class TodoistMain {
 			System.out.println(createTask(tokens));
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
-			// System.out.println("title not provided");
 		}
 	}
 
@@ -180,7 +195,6 @@ public class TodoistMain {
 		boolean important = tokens[4].equals("y");
 		boolean urgent = tokens[5].equals("y");
 		String status = tokens[6];
-		// System.out.println(tokens[6]);
 		if (status.length() < 2 + 2) {
 			throw new Exception("Invalid status " + status);
 		}
