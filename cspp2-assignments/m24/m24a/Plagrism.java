@@ -18,7 +18,7 @@ class Plagrism {
      */
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        if(!input.nextLine().equals("")){
+        if(input.nextLine().equals("")){
 
         
         File test = new File(input.nextLine());
