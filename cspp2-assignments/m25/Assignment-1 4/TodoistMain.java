@@ -153,8 +153,8 @@ public class TodoistMain {
         try {
             System.out.println(createTask(tokens));
         } catch (Exception e) {
-            // System.out.println(e.getMessage());
-            System.out.println("title not provided");
+            System.out.println(e.getMessage());
+            // System.out.println("title not provided");
         }
     }
 
@@ -169,9 +169,10 @@ public class TodoistMain {
      */
     public static Task createTask(final String[] tokens) throws Exception {
         String title = tokens[1];
-        if(title.equals(null)){
+        if(title == ""){
         	throw new Exception("Title not provide");
         }
+        System.out.println("hari how are you");
         String assignedTo = tokens[2];
         int timeToComplete = Integer.parseInt(tokens[3]);
         boolean important = tokens[4].equals("y");
