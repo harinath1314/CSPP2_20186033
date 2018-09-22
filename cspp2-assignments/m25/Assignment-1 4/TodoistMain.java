@@ -94,6 +94,16 @@ class Todoist{
 		todolist.add(t);
 	}
 
+	public Task getNextTask(String name){
+		for (Task each: todolist) {
+			if(name.equals(each.assignedTo) && (each.status == "todo"));{
+				return each;
+			}
+			
+		}
+		return null;
+	}
+
 	public void toprint(){
 		for (Task toli : todolist) {
 			System.out.println(toli);;
@@ -126,12 +136,11 @@ public class TodoistMain {
 			    testAddTask(todo, tokens);
 			break;
 			case "print-todoist":
-			    // System.out.println(todo);
 				todo.toprint();
 			break;
-			// case "get-next":
-			//     System.out.println(todo.getNextTask(tokens[1]));
-			// break;
+			case "get-next":
+			    System.out.println(todo.getNextTask(tokens[1]));
+			break;
 			// case "get-next-n":
 			//     int n = Integer.parseInt(tokens[2]);
 			//     Task[] tasks = todo.getNextTask(tokens[1], n);
