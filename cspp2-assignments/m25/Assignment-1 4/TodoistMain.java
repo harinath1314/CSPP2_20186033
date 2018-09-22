@@ -169,6 +169,7 @@ public class TodoistMain {
      */
     public static Task createTask(final String[] tokens) throws Exception {
         String title = tokens[1];
+        System.out.println(tokens[1]);
         if(title == ""){
         	throw new Exception("Title not provide");
         }
