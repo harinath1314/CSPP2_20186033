@@ -38,6 +38,9 @@ class Plagrism {
                 // System.out.println(input2);
                 try {
                     FileReader inp = new FileReader(input1);
+                    if(input1.equals(null)){
+                        throw new FileNotFoundException();
+                    }
                     FileReader inp2 = new FileReader(input2);
 
                     BufferedReader buff = new BufferedReader(inp);
