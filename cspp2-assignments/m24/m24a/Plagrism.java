@@ -42,8 +42,8 @@ class Plagrism {
 
                     BufferedReader buff = new BufferedReader(inp);
                     BufferedReader buff2 = new BufferedReader(inp2);
-                    TreeMap<String, Integer> freq = new TreeMap<>();
-                    TreeMap<String, Integer> freq2 = new TreeMap<>();
+                    HashMap<String, Integer> freq = new HashMap<>();
+                    HashMap<String, Integer> freq2 = new HashMap<>();
 
                     String lines;
                     while ((lines = buff.readLine()) != null ) {
@@ -121,8 +121,8 @@ class Plagrism {
      *
      * @return     { description_of_the_return_value }
      */
-    public static int plag_percent(TreeMap<String, Integer> freq,
-                                   TreeMap<String, Integer> freq2) {
+    public static int plag_percent(HashMap<String, Integer> freq,
+                                   HashMap<String, Integer> freq2) {
         int sum = 0 ;
         int sum2 = 0;
         int dot = 0;
