@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import java.io.File;
+import java.util.Arrays;
 
 /**
  * Class for stringmatch.
@@ -26,6 +27,7 @@ final class Solution {
         // String line = sc.next();
         File inp = new File(sc.next());
         File[] listoffiles = inp.listFiles();
+        Arrays.sort(listoffiles);
         // for (File name:listoffiles) {
         //  System.out.println(name);
         // }
