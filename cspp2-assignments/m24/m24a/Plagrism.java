@@ -47,7 +47,7 @@ class Plagrism {
 
                     String lines;
                     while ((lines = buff.readLine()) != null ) {
-                        String[] line = lines.replaceAll("[^a-zA-Z_0-9 ]", "").replaceAll("\n"," ").toLowerCase().split(" ");
+                        String[] line = lines.replaceAll("[^a-zA-Z_0-9. ]", "").replaceAll("\n"," ").toLowerCase().split(" ");
                         // System.out.println(Arrays.toString(line));
                         // String[] line = lines.toLowerCase().split(" ");
                         // if (line[0] != "\n") {
@@ -72,7 +72,7 @@ class Plagrism {
                     }
 
                     while ((lines = buff2.readLine()) != null ) {
-                        String [] line = lines.replaceAll("[^a-zA-Z_0-9 ]", "").replaceAll("\n"," ").toLowerCase().split(" ");
+                        String [] line = lines.replaceAll("[^a-zA-Z_0-9. ]", "").replaceAll("\n"," ").toLowerCase().split(" ");
 
 
                         // String [] line = lines.toLowerCase().split(" ");
