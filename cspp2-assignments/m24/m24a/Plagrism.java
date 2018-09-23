@@ -17,7 +17,13 @@ class Plagrism {
      * @param      args  The arguments
      */
     public static void main(String[] args) {
+        try{
+
+        
         Scanner input = new Scanner(System.in);
+        if(input.nextLine().equals(null)){
+            throw new FileNotFoundException();
+        }
         File test = new File(input.nextLine());
         File[] tested = test.listFiles();
         // System.out.print("\t\t");
@@ -115,6 +121,10 @@ class Plagrism {
         // String input1 = "dfghjklkhgvfcghj/fghjklkjh/";
         //String input2 = "/Users/harinathareddy/Desktop/MSIT COURSES/CSPP2_20186033/cspp2-assignments/m23/input002.txt";
 
+    }
+    catch(FileNotFoundException e){
+        System.out.println("empty directory");
+    }
     }
     /**
      * plagrism percentage calculation.
