@@ -21,10 +21,11 @@ class Plagrism {
 
         
         Scanner input = new Scanner(System.in);
-        if(input.nextLine().equals(null)){
+        String s = input.nextLine();
+        if(s.equals(null)){
             throw new FileNotFoundException();
         }
-        File test = new File(input.nextLine());
+        File test = new File(s);
         File[] tested = test.listFiles();
         // System.out.print("\t\t");
         Arrays.sort(tested);
