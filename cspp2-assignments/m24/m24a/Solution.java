@@ -1,5 +1,5 @@
 /**
- * Class 
+ * Class
  * author harinatha reddy
  * date 20/9/18
  */
@@ -10,7 +10,7 @@ import java.util.Scanner;
 import java.util.TreeMap;
 import java.io.BufferedReader;
 /**.
- * Class for plagrism. 
+ * Class for plagrism.
  */
 final class Solution {
     /**.
@@ -79,7 +79,7 @@ final class Solution {
                         for (String element : line) {
                             if (freqco2.containsKey(element)) {
                                 freqco2.put(element, freqco2.
-                                    get(element) + 1);
+                                            get(element) + 1);
                             } else {
                                 freqco2.put(element, 1);
                             }
@@ -94,7 +94,7 @@ final class Solution {
                 } catch (Exception e) {
                     System.out.println("File not Found");
 
-                } 
+                }
             }
         }
         System.out.println();
