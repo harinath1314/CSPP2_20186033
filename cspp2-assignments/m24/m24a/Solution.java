@@ -35,13 +35,13 @@ final class Solution {
         }
         File[] files = test.listFiles();
         for (File name : files) {
-            System.out.print("\t" + name.toString().split("\\\\")[1]);
+            System.out.print("\t" + name.toString().split("/")[1]);
 
         }
         for (File each : files) {
             System.out.println();
 
-            System.out.print(each.toString().split("\\\\")[1] + "\t");
+            System.out.print(each.toString().split("/")[1] + "\t");
             for (File next : files) {
                 try {
                     FileReader firfi = new FileReader(each);
