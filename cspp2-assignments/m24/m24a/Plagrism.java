@@ -21,13 +21,6 @@ class Plagrism {
         // while(input.hasNext()){
         //     throw new FileNotFoundException();
         // }
-        try{
-            if(input.nextLine().length() == 0)
-                throw new Exception();
-        } catch (Exception e){
-            System.out.println("empty directory");
-            return;
-        }
         File test = new File(input.nextLine());
 
         File[] tested = test.listFiles();
