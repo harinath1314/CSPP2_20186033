@@ -22,7 +22,7 @@ class Plagrism {
         
         Scanner input = new Scanner(System.in);
         String s = input.nextLine();
-        if(s.equals(null)){
+        if(s.equals("")){
             throw new FileNotFoundException();
         }
         File test = new File(s);
