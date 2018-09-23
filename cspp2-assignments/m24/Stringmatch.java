@@ -87,7 +87,7 @@ import java.io.File;
             }
         }
         //System.out.println(result);
-        sim = Math.round(((res * 2) / strLength) * hun2) / hun2;
+        sim = Math.round((((res * 2) / (strLength)) * hun2) / hun2);
         //System.out.println(stringLength);
         return (sim * hun1);
         }

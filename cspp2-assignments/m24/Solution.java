@@ -1,3 +1,7 @@
+/**
+ * Author harinatha reddy
+ * date 22/9/18
+ */
 import java.util.Scanner;
 import java.io.File;
 import java.util.Arrays;
