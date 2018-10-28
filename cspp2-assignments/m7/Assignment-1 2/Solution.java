@@ -29,7 +29,7 @@ class InputValidator {
 /**
  * Class for solution.
  */
-public class Solution {
+public final class Solution {
     /**
      * Constructs the object.
      */
@@ -37,9 +37,10 @@ public class Solution {
 
     }
     /**
-     * .
+     *.
+     * @param args
      */
-    public static void main(final String args[]) {
+    public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         String input = s.next();
         InputValidator i = new InputValidator(input);

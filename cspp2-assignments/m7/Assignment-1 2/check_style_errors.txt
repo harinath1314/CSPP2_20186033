@@ -1,6 +1,4 @@
 Starting audit...
-[ERROR] /Users/harinathareddy/Desktop/MSIT COURSES/CSPP2_20186033/cspp2-assignments/m7/Assignment-1 2/Solution.java:32: Class Solution should be declared as final. [FinalClass]
-[ERROR] /Users/harinathareddy/Desktop/MSIT COURSES/CSPP2_20186033/cspp2-assignments/m7/Assignment-1 2/Solution.java:42:42: Expected @param tag for 'args'. [JavadocMethod]
-[ERROR] /Users/harinathareddy/Desktop/MSIT COURSES/CSPP2_20186033/cspp2-assignments/m7/Assignment-1 2/Solution.java:42:46: Array brackets at illegal position. [ArrayTypeStyle]
+[ERROR] /Users/harinathareddy/Desktop/MSIT COURSES/CSPP2_20186033/cspp2-assignments/m7/Assignment-1 2/Solution.java:43:44: Expected @param tag for 'args'. [JavadocMethod]
 Audit done.
-Checkstyle ends with 3 errors.
+Checkstyle ends with 1 errors.
