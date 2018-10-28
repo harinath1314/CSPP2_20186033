@@ -1,18 +1,6 @@
 Starting audit...
-[ERROR] /Users/harinathareddy/Desktop/MSIT COURSES/CSPP2_20186033/cspp2-assignments/m7/Assignment-1 2/Solution.java:29: Missing a Javadoc comment. [JavadocType]
-[ERROR] /Users/harinathareddy/Desktop/MSIT COURSES/CSPP2_20186033/cspp2-assignments/m7/Assignment-1 2/Solution.java:29:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
-[ERROR] /Users/harinathareddy/Desktop/MSIT COURSES/CSPP2_20186033/cspp2-assignments/m7/Assignment-1 2/Solution.java:30:1: '{' at column 1 should be on the previous line. [LeftCurly]
-[ERROR] /Users/harinathareddy/Desktop/MSIT COURSES/CSPP2_20186033/cspp2-assignments/m7/Assignment-1 2/Solution.java:31:1: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] /Users/harinathareddy/Desktop/MSIT COURSES/CSPP2_20186033/cspp2-assignments/m7/Assignment-1 2/Solution.java:31:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] /Users/harinathareddy/Desktop/MSIT COURSES/CSPP2_20186033/cspp2-assignments/m7/Assignment-1 2/Solution.java:31:33: Parameter args should be final. [FinalParameters]
-[ERROR] /Users/harinathareddy/Desktop/MSIT COURSES/CSPP2_20186033/cspp2-assignments/m7/Assignment-1 2/Solution.java:31:44: Array brackets at illegal position. [ArrayTypeStyle]
-[ERROR] /Users/harinathareddy/Desktop/MSIT COURSES/CSPP2_20186033/cspp2-assignments/m7/Assignment-1 2/Solution.java:32:5: '{' at column 5 should be on the previous line. [LeftCurly]
-[ERROR] /Users/harinathareddy/Desktop/MSIT COURSES/CSPP2_20186033/cspp2-assignments/m7/Assignment-1 2/Solution.java:33:18: '=' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] /Users/harinathareddy/Desktop/MSIT COURSES/CSPP2_20186033/cspp2-assignments/m7/Assignment-1 2/Solution.java:33:19: '=' is not followed by whitespace. [WhitespaceAround]
-[ERROR] /Users/harinathareddy/Desktop/MSIT COURSES/CSPP2_20186033/cspp2-assignments/m7/Assignment-1 2/Solution.java:34:21: '=' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] /Users/harinathareddy/Desktop/MSIT COURSES/CSPP2_20186033/cspp2-assignments/m7/Assignment-1 2/Solution.java:34:22: '=' is not followed by whitespace. [WhitespaceAround]
-[ERROR] /Users/harinathareddy/Desktop/MSIT COURSES/CSPP2_20186033/cspp2-assignments/m7/Assignment-1 2/Solution.java:35: Line has trailing spaces. [RegexpSingleline]
-[ERROR] /Users/harinathareddy/Desktop/MSIT COURSES/CSPP2_20186033/cspp2-assignments/m7/Assignment-1 2/Solution.java:35:25: '=' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] /Users/harinathareddy/Desktop/MSIT COURSES/CSPP2_20186033/cspp2-assignments/m7/Assignment-1 2/Solution.java:35:26: '=' is not followed by whitespace. [WhitespaceAround]
+[ERROR] /Users/harinathareddy/Desktop/MSIT COURSES/CSPP2_20186033/cspp2-assignments/m7/Assignment-1 2/Solution.java:32: Class Solution should be declared as final. [FinalClass]
+[ERROR] /Users/harinathareddy/Desktop/MSIT COURSES/CSPP2_20186033/cspp2-assignments/m7/Assignment-1 2/Solution.java:42:42: Expected @param tag for 'args'. [JavadocMethod]
+[ERROR] /Users/harinathareddy/Desktop/MSIT COURSES/CSPP2_20186033/cspp2-assignments/m7/Assignment-1 2/Solution.java:42:46: Array brackets at illegal position. [ArrayTypeStyle]
 Audit done.
-Checkstyle ends with 15 errors.
+Checkstyle ends with 3 errors.
